@@ -19,7 +19,7 @@ Original App Design Project - README Template
 - **Category:**
 - **Mobile:**
 - **Story:**
-- **Market:**
+- **Market: This app is aiming to build connections between members in the same location**
 - **Habit:**
 - **Scope:**
 
