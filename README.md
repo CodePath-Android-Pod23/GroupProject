@@ -16,11 +16,11 @@ Original App Design Project - README Template
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market: This app is aiming to build connections between members in the same location**
-- **Habit:**
+- **Category: Personalized reccomendation and Social Networking app**
+- **Mobile: Andrioid**
+- **Story: An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.**
+- **Market: This app is aiming to build connections between members in the same location based on interest in similar genres**
+- **Habit:This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they’re looking for.**
 - **Scope:**
 
 ## Product Spec
@@ -29,22 +29,32 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users should be able to create a profile. 
+* User should be able to add and edit the information on their profile (location, favourite genres, context etc.)
+* User should be able to log in and log out.
+* Users can select their favorite genres.
+* Users can view the list of recommendations based on their selected/favourite genres.
+* Users may receive notification on a daily or weekly basis with new recommendations.  
+* Users should be able to see other in their location with similar interests.
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users can message to people who have the tastes with them.
+* Users also can organize virtual and offline events to meet up.
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Log in screen
+   * User create a new profile
+   * User can log in and log out 
+* Registration screen
+   * User can add their profile information, select their favourite genres
+* Profile screen 
+   * Edit and view their profile information
+ * Feed with recoomendations, people nearby
+   * Users should be able to see a list of recommendations based on their interests
+   * Users should be able to see the list of people nearby with their similar interests
+   
 
 ### 3. Navigation
 
