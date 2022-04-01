@@ -70,9 +70,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 * Forced Log-in -> Account creation if no log in is available
 * Registration screen --> new users can select their favourite genres, or update their previous choices 
-* Recommendation Feed 
-      *  Feed for recommendation (books, movies etc.)
-      *  Feed for people in your area 
+* Recommendation Feed ->Feed for recommendation (books, movies etc.), ->Feed for people in your area 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
