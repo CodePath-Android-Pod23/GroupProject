@@ -16,12 +16,12 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:** Social Networking/Personalized reccomendation
-- **Mobile: Andrioid**
-- **Story: An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.**
-- **Market: This app is aiming to build connections between members in the same location based on interest in similar genres. People can be organized and their interests.**
-- **Habit:This app could be used as frequently as the user wanted depending on how deep their social life is, and what exactly they’re looking for.**
-- **Scope:First, we will show the user recommendations based on their preferred genre and then show them people in their area with similar interests. This  could potentially be used for messaging and meeting new people in you area.**
+- **Category:** Social Networking/Personalized reccommendation
+- **Mobile:** Andrioid
+- **Story:** An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.
+- **Market:** This app is aiming to build connections between members in the same location based on interest in similar genres. People can be organized by location and their interests.
+- **Habit:** This app could be used as frequently as the user wanted depending on how active their social life is, and what exactly they’re looking for interms of new recommendations.
+- **Scope:** First, we will show the user recommendations based on their preferred genre and then show them people in their area with similar interests. This app could potentially be used for messaging and meeting new people in you area.
 
 ## Product Spec
 
@@ -30,16 +30,16 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 **Required Must-have Stories**
 
 * Users should be able to create a profile. 
-* User should be able to add and edit the information on their profile (location, favourite genres, context etc.)
-* User should be able to log in and log out.
+* Users should be able to add and edit the information on their profile (location, favourite genres, context etc.)
+* Users should be able to log in and log out.
 * Users can select their favorite genres.
 * Users can view the list of recommendations based on their selected/favourite genres.
 * Users may receive notification on a daily or weekly basis with new recommendations.  
-* Users should be able to see other in their location with similar interests.
+* Users should be able to see others in their location with similar interests.
 
 **Optional Nice-to-have Stories**
 
-* Users can message to people who have the tastes with them.
+* Users can send messages to people who have the tastes with them.
 * Users also can organize virtual and offline events to meet up.
 
 ### 2. Screen Archetypes
@@ -50,7 +50,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 * Registration screen
    * User can add their profile information, select their favourite genres
 * Profile screen/ Setting 
-   * Edit and view their profile information
+   * Edit and view their profile information and settings
  * Feed with recommendations, people nearby
    * Users should be able to see a list of recommendations based on their interests
    * Users should be able to see the list of people nearby with their similar interests
@@ -70,7 +70,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 * Forced Log-in -> Account creation if no log in is available
 * Registration screen --> new users can select their favourite genres, or update their previous choices 
-* Recommendation Feed ->Feed for recommendation (books, movies etc.), ->Feed for people in your area 
+* Recommendation Feed ->Feed for recommendations (books, movies etc.), ->Feed for people in your area 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
