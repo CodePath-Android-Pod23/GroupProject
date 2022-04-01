@@ -2,7 +2,7 @@
 Original App Design Project 
 ===
 
-# Favourites and Friends
+# Favourites & Friends
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -16,7 +16,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category: Social Networking/Personalized reccomendation**
+- **Category:** Social Networking/Personalized reccomendation
 - **Mobile: Andrioid**
 - **Story: An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.**
 - **Market: This app is aiming to build connections between members in the same location based on interest in similar genres. People can be organized and their interests.**
