@@ -1,8 +1,8 @@
 # GroupProject
-Original App Design Project - README Template
+Original App Design Project 
 ===
 
-# APP_NAME_HERE
+# Favourites and Friends
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -12,16 +12,16 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+Tracks what genre of book, movies etc. an individual prefers, gives the user recommendation based on their preferred genres, and shows them users in their location with similar interests. Could be potentially used for chatting and meeting new friends with similar tastes in your area.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category: Personalized reccomendation and Social Networking app**
+- **Category: Social Networking/Personalized reccomendation**
 - **Mobile: Andrioid**
 - **Story: An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.**
-- **Market: This app is aiming to build connections between members in the same location based on interest in similar genres**
-- **Habit:This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they’re looking for.**
-- **Scope:**
+- **Market: This app is aiming to build connections between members in the same location based on interest in similar genres. People can be organized and their interests.**
+- **Habit:This app could be used as frequently as the user wanted depending on how deep their social life is, and what exactly they’re looking for.**
+- **Scope:First, we will show the user recommendations based on their preferred genre and then show them people in their area with similar interests. This  could potentially be used for messaging and meeting new people in you area.**
 
 ## Product Spec
 
@@ -49,9 +49,9 @@ Original App Design Project - README Template
    * User can log in and log out 
 * Registration screen
    * User can add their profile information, select their favourite genres
-* Profile screen 
+* Profile screen/ Setting 
    * Edit and view their profile information
- * Feed with recoomendations, people nearby
+ * Feed with recommendations, people nearby
    * Users should be able to see a list of recommendations based on their interests
    * Users should be able to see the list of people nearby with their similar interests
    
@@ -60,18 +60,19 @@ Original App Design Project - README Template
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Profile/Settings
+
+**Optional Nice-to-have **
+
+* Chat -> Jumps to Chat
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Forced Log-in -> Account creation if no log in is available
+* Registration screen --> new users can select their favourite genres, or update their previous choices 
+* Recommendation Feed 
+      *  Feed for recommendation (books, movies etc.)
+      *  Feed for people in your area 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
