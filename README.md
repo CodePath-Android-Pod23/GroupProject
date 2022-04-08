@@ -76,8 +76,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 <img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/Wireframe/Wireframe.jpg" width=800>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/ArtBoards/Chat.jpg">
-<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/ArtBoards/Details.jpg">
+<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/Artboard/ArtBoard.jpg width=800">
 
 ### [BONUS] Interactive Prototype
 <img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/app_prototype.gif" width=200>
