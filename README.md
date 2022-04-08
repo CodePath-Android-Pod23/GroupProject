@@ -146,14 +146,57 @@ Users:
 
 Items:
 
-Item Type:
-Name
-Genre
-Sypnosis
-Picture
-Recommend by
-No. of Recommendations
-Links
+<table>
+<thead>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Item Type</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Genre</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Synopsis</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Recommend by</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of Recommendations</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Links</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
 ### Networking
 - [Add list of network requests by screen ]
