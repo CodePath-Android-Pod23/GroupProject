@@ -236,7 +236,7 @@ Items:
     </ul>
   </li>
   
-  <li> Details
+  <li> Users Nearby
     <ul>
       <li> (Read/GET) Query users based on their location (same city?) </li>
       <li> (Create/POST) Send a Friend Request </li>
@@ -256,7 +256,7 @@ Items:
 ```kotlin
         val query: ParseQuery<Item> = ParseQuery.getQuery(Post::class.java)
         // Find all recommendation items from the log in user
-        query.include(Post.KEY_USER)
+        query.include(Item.KEY_USER)
         query.findInBackground { recommendationList, e ->
             if (e == null) {
                 Log.i("Recommendations", "Retrieved " + recommendationList.size + " recommendations")
