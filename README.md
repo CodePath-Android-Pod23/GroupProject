@@ -205,8 +205,13 @@ Items:
 
 ### Networking
 
-Login Screen:
-•	(Read/GET) Query logged in user object
+<ul>
+  <li> Login Screen
+    <ul>
+      <li> (Read/GET) Query logged in user object </li>
+    </ul>
+  </li>
+</ul>
 
 Profile:
 •	(Create/POST) Create new User Object
