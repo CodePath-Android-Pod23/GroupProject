@@ -156,14 +156,19 @@ Items:
 </thead>
 <tbody>
   <tr>
+    <td>Item Id</td>
+    <td>String</td>
+    <td>Unique id for the Item (default field)</td>
+  </tr>
+  <tr>
     <td>Item Type</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>What is the item type? (movies or books)</td>
   </tr>
   <tr>
     <td>Name</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Name of the Book/Movie</td>
   </tr>
   <tr>
     <td>Genre</td>
@@ -172,23 +177,23 @@ Items:
   </tr>
   <tr>
     <td>Synopsis</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Short Description of the item</td>
   </tr>
   <tr>
     <td>Image</td>
-    <td></td>
-    <td></td>
+    <td>File</td>
+    <td>Image that defines the Item</td>
   </tr>
   <tr>
-    <td>Recommend by</td>
-    <td></td>
-    <td></td>
+    <td>Recommended by</td>
+    <td>Pointer to User</td>
+    <td>Recommenders</td>
   </tr>
   <tr>
     <td>No. of Recommendations</td>
-    <td></td>
-    <td></td>
+    <td>Number</td>
+    <td>number of recommendations for the item</td>
   </tr>
   <tr>
     <td>Links</td>
