@@ -88,24 +88,61 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 Users:
 
 <table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
+<thead>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full Name</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Friends</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Recommendations</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Genres</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Username</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Emails</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Phone Number</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
 </table>
-Name
-Location
-Friends
-Recommendations
-Genres
-Username
-Emails
-Phone Number
-Password
-
 
 Items:
 
