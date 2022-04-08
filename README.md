@@ -98,48 +98,48 @@ Users:
 <tbody>
   <tr>
     <td>Full Name</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Name of the User</td>
   </tr>
   <tr>
     <td>Location</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Name of the City</td>
   </tr>
   <tr>
     <td>Friends</td>
-    <td></td>
-    <td></td>
+    <td>List of Pointers to Users</td>
+    <td>List of Friends</td>
   </tr>
   <tr>
     <td>Recommendations</td>
-    <td></td>
-    <td></td>
+    <td>List of Pointers to Item Objects</td>
+    <td>List of Recommendations by the User</td>
   </tr>
   <tr>
     <td>Genres</td>
-    <td></td>
-    <td></td>
+    <td>Array of String</td>
+    <td>List of Genres Subscribed by the User</td>
   </tr>
   <tr>
     <td>Username</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Username of the User</td>
   </tr>
   <tr>
     <td>Emails</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Email of the Use</td>
   </tr>
   <tr>
     <td>Phone Number</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Phone Number of the User</td>
   </tr>
   <tr>
     <td>Password</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Password of the User</td>
   </tr>
 </tbody>
 </table>
