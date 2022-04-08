@@ -77,8 +77,10 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Interactive Prototype
+<img src="https://penno365-my.sharepoint.com/personal/pijamo_upenn_edu/Documents/CodePath/Social%20Media%20App/app_prototype.gif?Web=1" width=600>
 
 ## Schema 
 [This section will be completed in Unit 9]
