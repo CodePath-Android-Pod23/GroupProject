@@ -84,7 +84,40 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+Users:
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+</table>
+Name
+Location
+Friends
+Recommendations
+Genres
+Username
+Emails
+Phone Number
+Password
+
+
+Items:
+
+Item Type:
+Name
+Genre
+Sypnosis
+Picture
+Recommend by
+No. of Recommendations
+Links
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
