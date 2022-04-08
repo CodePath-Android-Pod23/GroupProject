@@ -172,8 +172,8 @@ Items:
   </tr>
   <tr>
     <td>Genre</td>
-    <td></td>
-    <td></td>
+    <td>Array of String</td>
+    <td>Genres related to the Item</td>
   </tr>
   <tr>
     <td>Synopsis</td>
@@ -197,8 +197,8 @@ Items:
   </tr>
   <tr>
     <td>Links</td>
-    <td></td>
-    <td></td>
+    <td>String</td>
+    <td>Link to the item on store pages</td>
   </tr>
 </tbody>
 </table>
