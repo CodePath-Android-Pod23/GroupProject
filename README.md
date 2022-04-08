@@ -80,7 +80,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 <img src="https://penno365-my.sharepoint.com/:i:/g/personal/pijamo_upenn_edu/EfXH1CwOIkVPttaqYBXJHfgBiG-bN-CHeXwN-aYcUGsalA?e=VKjD3n" width=600>
 
 ### [BONUS] Interactive Prototype
-<img src="penno365-my.sharepoint.com/personal/pijamo_upenn_edu/Documents/CodePath/Social%20Media%20App/app_prototype.gif?Web=1" width=600>
+<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/app_prototype.gif" width=600>
 
 ## Schema 
 [This section will be completed in Unit 9]
