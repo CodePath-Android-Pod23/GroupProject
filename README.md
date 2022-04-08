@@ -211,31 +211,46 @@ Items:
       <li> (Read/GET) Query logged in user object </li>
     </ul>
   </li>
+  
+  <li> Profile
+    <ul>
+      <li> (Update/PUT) Create new User Object </li>
+      <li> (Update/PUT) Update user object </li>
+      <li> (Read/GET) (Read/GET) Query Details of a User Object </li>
+    </ul>
+  </li>
+  
+  <li> Recommendations
+    <ul>
+      <li> (Read/GET) Query all recommendations (including details) which match the user’s selected genres </li>
+      <li> (Create/POST) Create a new “Recommendation/Favourite” on an item </li>
+      <li> (Delete) Delete existing recommendation </li>
+    </ul>
+  </li>
+  
+  <li> Details
+    <ul>
+      <li> (Read/GET) Query to get all comments of the item </li>
+      <li> (Create/POST) Create a new comment on a post </li>
+      <li> (Delete) Delete existing comment </li>
+    </ul>
+  </li>
+  
+  <li> Details
+    <ul>
+      <li> (Read/GET) Query users based on their location (same city?) </li>
+      <li> (Create/POST) Send a Friend Request </li>
+    </ul>
+  </li>
+  
+  <li> Genre Choose Screen:
+    <ul>
+      <li> (Read/GET) Query all genres added by the User </li>
+      <li> (Create/POST) Create list of genres selected by the User </li>
+      <li> (Update/PUT) Update list of genres selected by the User </li>
+    </ul>
+  </li>
 </ul>
 
-Profile:
-•	(Create/POST) Create new User Object
-•	(Update/PUT) Update user object
-•	(Read/GET) Query Details of a User Object
-
-Recommendations:
-•	(Read/GET) Query all recommendations (including details) which match the user’s selected genres
-•	(Create/POST) Create a new “Recommendation/Favourite” on an item
-•	(Delete) Delete existing recommendation
-
-Details
-•	(Read/GET) Query to get all comments of the item
-•	(Create/POST) Create a new comment on a post
-•	(Delete) Delete existing comment
-Users Nearby
-•	(Read/GET) Query users based on their location (same city?)
-•	(Create/POST) Send a Friend Request
-
-Genre Choose Screen:
-•	(Read/GET) Query all genres added by the User
-•	(Create/POST) Create list of genres selected by the User
-•	(Update/PUT) Update list of genres selected by the User
-
-- [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
