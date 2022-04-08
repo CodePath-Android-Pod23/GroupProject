@@ -252,5 +252,17 @@ Items:
   </li>
 </ul>
 
-- [Create basic snippets for each Parse network request]
+- Example query: Query all recommendations (including details) which match the user’s selected genres
+```kotlin
+        val query: ParseQuery<Item> = ParseQuery.getQuery(Post::class.java)
+        // Find all recommendation items from the log in user
+        query.include(Post.KEY_USER)
+        query.findInBackground { recommendationList, e ->
+            if (e == null) {
+                Log.i("Recommendations", "Retrieved " + recommendationList.size + " recommendations")
+            } else {
+                e.printStackTrace()
+            }
+        }
+```
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
