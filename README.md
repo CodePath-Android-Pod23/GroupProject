@@ -204,6 +204,33 @@ Items:
 </table>
 
 ### Networking
+
+Login Screen:
+•	(Read/GET) Query logged in user object
+
+Profile:
+•	(Create/POST) Create new User Object
+•	(Update/PUT) Update user object
+•	(Read/GET) Query Details of a User Object
+
+Recommendations:
+•	(Read/GET) Query all recommendations (including details) which match the user’s selected genres
+•	(Create/POST) Create a new “Recommendation/Favourite” on an item
+•	(Delete) Delete existing recommendation
+
+Details
+•	(Read/GET) Query to get all comments of the item
+•	(Create/POST) Create a new comment on a post
+•	(Delete) Delete existing comment
+Users Nearby
+•	(Read/GET) Query users based on their location (same city?)
+•	(Create/POST) Send a Friend Request
+
+Genre Choose Screen:
+•	(Read/GET) Query all genres added by the User
+•	(Create/POST) Create list of genres selected by the User
+•	(Update/PUT) Update list of genres selected by the User
+
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
