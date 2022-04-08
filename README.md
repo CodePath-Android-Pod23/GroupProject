@@ -73,8 +73,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 * Recommendation Feed ->Feed for recommendations (books, movies etc.), ->Feed for people in your area 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/WireFrame/Wireframe.jpg" width=400>
+<img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/WireFrame/Wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://penno365-my.sharepoint.com/:i:/g/personal/pijamo_upenn_edu/EfXH1CwOIkVPttaqYBXJHfgBiG-bN-CHeXwN-aYcUGsalA?e=VKjD3n" width=600>
