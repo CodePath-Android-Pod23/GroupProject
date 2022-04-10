@@ -166,9 +166,9 @@ Items:
     <td>What is the item type? (movies or books)</td>
   </tr>
   <tr>
-    <td>Name</td>
+    <td>Title</td>
     <td>String</td>
-    <td>Name of the Book/Movie</td>
+    <td>Title of the Book/Movie</td>
   </tr>
   <tr>
     <td>Genre</td>
@@ -197,8 +197,8 @@ Items:
   </tr>
   <tr>
     <td>Links</td>
-    <td>String</td>
-    <td>Link to the item on store pages</td>
+    <td>Array of String</td>
+    <td>Links to the item on store pages</td>
   </tr>
 </tbody>
 </table>
