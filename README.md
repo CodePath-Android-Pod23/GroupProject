@@ -282,7 +282,7 @@ Items:
 ### Sprint 1
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='sprint1.gif' title='Video Walkthrough for Sprint 1' width='' alt='Sprint 1 Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
