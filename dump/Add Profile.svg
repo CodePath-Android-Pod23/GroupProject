@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 49 49">
+  <defs>
+    <filter id="BG" x="0" y="0" width="49" height="49" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#1478fb" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Add_Profile" data-name="Add Profile" transform="translate(12.126 7.203)">
+    <g transform="matrix(1, 0, 0, 1, -12.13, -7.2)" filter="url(#BG)">
+      <circle id="BG-2" data-name="BG" cx="12.5" cy="12.5" r="12.5" transform="translate(12 7)" fill="#1478fb"/>
+    </g>
+    <path id="Plus_Icon" data-name="Plus Icon" d="M11.823,6.75H7.573V2.5H6.75V6.75H2.5v.823H6.75v4.25h.823V7.573h4.25Z" transform="translate(5.237 5.237)" fill="#fff"/>
+  </g>
+</svg>

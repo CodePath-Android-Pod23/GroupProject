@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <filter id="Icon" x="0" y="0" width="87" height="87" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feFlood flood-color="#1478fb" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_15" data-name="Group 15" transform="translate(-4 -9)">
+    <g id="Button_-_Back" data-name="Button - Back" transform="translate(0 -4)">
+      <g transform="matrix(1, 0, 0, 1, 4, 13)" filter="url(#Icon)">
+        <rect id="Icon-2" data-name="Icon" width="45" height="45" rx="6" transform="translate(21 17)" fill="#1478fb"/>
+      </g>
+      <path id="Arrow_Icon" data-name="Arrow Icon" d="M7,16,3,12m0,0L7,8M3,12H21" transform="translate(36 41)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
