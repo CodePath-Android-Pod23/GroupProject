@@ -197,7 +197,7 @@ Items:
   </tr>
   <tr>
     <td>Recommended by</td>
-    <td>Pointer to User</td>
+    <td>List of Pointers to Users</td>
     <td>Recommenders</td>
   </tr>
   <tr>
