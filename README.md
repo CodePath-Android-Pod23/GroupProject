@@ -90,7 +90,6 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 <img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/app_prototype.gif" width=200>
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 
 Users:
