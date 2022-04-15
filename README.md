@@ -28,6 +28,9 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 **Required Must-have Stories**
 
+- [x] Configure Parse Server to store User and Item (movie/book) data
+- [x] Create a modern, responsive and user-friendly app UI design
+- [x] Determine the APIs used to get movie and book data
 - [ ] New users should be able to sign up and create a profile. 
 - [ ] Existing users should be able to log in and log out.
 - [ ] Users should be able to add and edit the information on their profile (location, contact information, etc.)
