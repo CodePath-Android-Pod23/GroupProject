@@ -12,16 +12,15 @@ Original App Design Project
 
 ## Overview
 ### Description
-Tracks what genre of book, movies etc. an individual prefers, gives the user recommendation based on their preferred genres, and shows them users in their location with similar interests. Could be potentially used for chatting and meeting new friends with similar tastes in your area.
+Tracks what genre of book, movies etc. an individual prefers, gives the user recommendations based on their preferred genres, and shows them users in their location with similar interests. Could be potentially used for chatting and meeting new friends with similar tastes in your area.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:** Social Networking/Personalized reccommendation
-- **Mobile:** Andrioid
-- **Story:** An app that can recommend books, movies, etc based on the users’ favorite genres. Help them make connections in their location with those with similar interests.
-- **Market:** This app is aiming to build connections between members in the same location based on interest in similar genres. People can be organized by location and their interests.
-- **Habit:** This app could be used as frequently as the user wanted depending on how active their social life is, and what exactly they’re looking for interms of new recommendations.
-- **Scope:** First, we will show the user recommendations based on their preferred genre and then show them people in their area with similar interests. This app could potentially be used for messaging and meeting new people in you area.
+- **Category:** Social Networking/Personalized Reccommendation
+- **Mobile:** Android
+- **Story:** An app that can recommend books, movies, etc based on the users’ favorite genres. The users can also make connections with other users who have similar interests in their location.
+- **Market:** This app is aiming to build connections between users in the same location based on interest in similar genres. People can be organized by location and their interests.
+- **Habit:** This app could be used as frequently as the user wanted depending on how active their social life is, and what exactly they’re looking for in terms of new recommendations.
+- **Scope:** First, we will show the user recommendations based on their preferred genres and then show them people in their area with similar interests. This app could potentially be used for messaging and meeting new people in you area.
 
 ## Product Spec
 
@@ -29,48 +28,57 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 **Required Must-have Stories**
 
-* Users should be able to create a profile. 
-* Users should be able to add and edit the information on their profile (location, favourite genres, context etc.)
-* Users should be able to log in and log out.
-* Users can select their favorite genres.
-* Users can view the list of recommendations based on their selected/favourite genres.
-* Users may receive notification on a daily or weekly basis with new recommendations.  
-* Users should be able to see others in their location with similar interests.
+- [ ] New users should be able to sign up and create a profile. 
+- [ ] Existing users should be able to log in and log out.
+- [ ] Users should be able to add and edit the information on their profile (location, contact information, etc.)
+- [ ] Users can select their favorite genres.
+- [ ] Users can view the list of recommendations (movies and books) based on their selected/favourite genres.
+- [ ] Users can view the detailed information of each movie/book.
+- [ ] Users should be able to see a list of other users in their location with similar interests.
+- [ ] Users should be able to view other users' profiles.
+- [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
 
 **Optional Nice-to-have Stories**
 
-* Users can send messages to people who have the tastes with them.
-* Users also can organize virtual and offline events to meet up.
+- [ ] Users can send messages to people who have the similar tastes with them.
+- [ ] Users also can organize virtual and offline events to meet up.
 
 ### 2. Screen Archetypes
 
 * Log in screen
-   * User create a new profile
-   * User can log in and log out 
-* Registration screen
-   * User can add their profile information, select their favourite genres
-* Profile screen/ Setting 
-   * Edit and view their profile information and settings
- * Feed with recommendations, people nearby
-   * Users should be able to see a list of recommendations based on their interests
-   * Users should be able to see the list of people nearby with their similar interests
+  * User create a new profile
+  * User can log in and log out 
+* Genres selection screen
+  * User can select their favourite genres
+* Profile screen/Setting 
+  * Add, edit and view their profile information and settings
+* Feed with recommendations
+  * Users should be able to see a list of recommendations based on their interests
+* People nearby screen
+  * Users should be able to see a list of people nearby with their similar interests
+* Item details screen
+  * Users should be able to see the detailed information of movie/book selected 
    
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Profile/Settings
+* Home (Recommendations)
+* People
+* Profile
 
-**Optional Nice-to-have **
+  **Optional Nice-to-have**
 
-* Chat -> Jumps to Chat
+* Chat (Jumps to Chat)
 
 **Flow Navigation** (Screen to Screen)
 
 * Forced Log-in -> Account creation if no log in is available
-* Registration screen --> new users can select their favourite genres, or update their previous choices 
-* Recommendation Feed ->Feed for recommendations (books, movies etc.), ->Feed for people in your area 
+* Genres selection screen (new users can select their favourite genres, or update their previous choices) -> Jumps to Recommendation Feed
+* Recommendation Feed -> Jumps to item details (books, movies etc.)
+* People -> Jumps to user profile 
+* Profile/Setting -> Text field to modified (for user's own profile), Log-out option
 
 ## Wireframes
 <img src="https://github.com/CodePath-Android-Pod23/GroupProject/blob/main/Wireframe/Wireframe.jpg" width=800>
