@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    android:layout_gravity="center"
     android:layout_margin="5dp"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp">
@@ -12,20 +11,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/idIVcourseIV"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher" />
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <TextView
-            android:id="@+id/tv_text"
+            android:id="@+id/tv_genreName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
+            android:textSize="20dp"
             android:textAlignment="center" />
 
     </LinearLayout>
