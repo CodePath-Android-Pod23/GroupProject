@@ -28,23 +28,26 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 **Required Must-have Stories**
 
-- [x] Configure Parse Server to store User and Item (movie/book) data
+- [x] Configure Parse Server to store User and Item (movie) data
 - [x] Create a modern, responsive and user-friendly app UI design
 - [x] Determine the APIs used to get movie and book data
 - [ ] New users should be able to sign up and create a profile. 
 - [ ] Existing users should be able to log in and log out.
 - [ ] Users should be able to add and edit the information on their profile (location, contact information, etc.)
 - [ ] Users can select their favorite genres.
-- [ ] Users can view the list of recommendations (movies and books) based on their selected/favourite genres.
-- [ ] Users can view the detailed information of each movie/book.
+- [ ] Users can view the list of recommendations (movies) based on their selected/favourite genres.
+- [ ] Users can view the detailed information of each movie.
 - [ ] Users should be able to see a list of other users in their location with similar interests.
 - [ ] Users should be able to view other users' profiles.
-- [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can send messages to people who have the similar tastes with them.
 - [ ] Users also can organize virtual and offline events to meet up.
+- [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
+- [ ] Users can get recommendations (books) based on their selected/favourite genres.
+- [ ] Users can get movie review information
+- [ ] Users can be redirected to the movie purchase page
 
 ### 2. Screen Archetypes
 
