@@ -11,6 +11,11 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="onboarding_welcome">Let\'s connect with each other</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">eRQg7Ix0YjWF9EJ4J1GhwRX2SYi7ABScZuNrsh60</string>
+    <string name="back4app_client_key">Ld2tzupR64dZUUEbpXF5FcTHv8MDUmAxNU9lKh03</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
