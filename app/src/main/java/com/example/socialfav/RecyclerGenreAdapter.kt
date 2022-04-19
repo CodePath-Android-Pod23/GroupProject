@@ -31,7 +31,7 @@ class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var genreName: Button
+        var genreName: TextView
 
         init {
             genreName = itemView.findViewById(R.id.tv_genreName)
