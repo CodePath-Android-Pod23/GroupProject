@@ -20,9 +20,9 @@ class SignUpActivity : AppCompatActivity() {
             val username = findViewById<TextInputLayout>(R.id.et_username).editText?.text.toString()
             val password = findViewById<TextInputLayout>(R.id.et_password).editText?.text.toString()
             val fullName = findViewById<TextInputLayout>(R.id.et_fullName).editText?.text.toString()
-            val emailOrMobile = findViewById<TextInputLayout>(R.id.et_mobileNumber).editText?.text.toString()
+            val email = findViewById<TextInputLayout>(R.id.et_email).editText?.text.toString()
 
-            signUpUser(username,password, fullName, emailOrMobile)
+            signUpUser(username,password, fullName, email)
 
 //            val intent = Intent( this, userDetails::class.java )
 //            startActivity(intent)
@@ -37,7 +37,7 @@ class SignUpActivity : AppCompatActivity() {
         user.setUsername(username)
         user.setPassword(password)
         //user.setFullName(fullName)
-        //user.setEmail(emailOrMobile) OR user.setNumber(emailOrMobile)
+        //user.setEmail(email)
 
         user.signUpInBackground { e ->
             if (e == null) {
