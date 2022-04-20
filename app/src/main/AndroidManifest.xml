@@ -36,7 +36,7 @@
             android:name=".GenreActivity"
             android:exported="false" />
         <activity
-            android:name=".userDetails"
+            android:name=".UserDetails"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"

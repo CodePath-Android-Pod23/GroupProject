@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
+import com.parse.ParseObject
 import com.parse.ParseUser
 
 class SignUpActivity : AppCompatActivity() {
@@ -31,19 +32,19 @@ class SignUpActivity : AppCompatActivity() {
     }
 
 
-    private fun signUpUser(username: String, password: String,fullName: String, emailOrMobile:String){
+    private fun signUpUser(username: String, password: String,fullName: String, email:String){
         val user = ParseUser()
 
         user.setUsername(username)
         user.setPassword(password)
-        //user.setFullName(fullName)
-        //user.setEmail(email)
+        user.put("email", email)
+        user.put("FullName", fullName)
 
         user.signUpInBackground { e ->
             if (e == null) {
                 Toast.makeText(this, "Sign up was successful!", Toast.LENGTH_SHORT).show()
                 Log.i(LoginActivity.TAG, "Successful Sigh Up")
-                goToFeed()
+                goToUserDetails()
             } else {
                 Toast.makeText(this, "Sign up was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
@@ -51,8 +52,8 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToFeed(){
-        val intent = Intent(this,FavActivity::class.java)
+    private fun goToUserDetails(){
+        val intent = Intent(this,UserDetails::class.java)
         startActivity(intent)
         finish()
     }
