@@ -38,21 +38,11 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:text="Choose Atleast 5 Favorite Genres"/>
-
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_posts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="5"/>
 
         <Button
@@ -61,10 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_gravity="bottom"
-            android:layout_marginHorizontal="50dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
-            android:text="Save Choices" />
+            android:text="Space for Nav Screen" />
 
     </LinearLayout>
 

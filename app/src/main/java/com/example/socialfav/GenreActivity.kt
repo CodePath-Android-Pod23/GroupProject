@@ -1,8 +1,10 @@
 package com.example.socialfav
 
 import RecyclerGenreAdapter
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,5 +28,11 @@ class GenreActivity : AppCompatActivity() {
         adapter = RecyclerGenreAdapter()
 
         recyclerView.adapter = adapter
+
+
+        findViewById<Button>(R.id.btn_saveChoices).setOnClickListener{
+            val intent = Intent( this, FavActivity::class.java )
+            startActivity(intent)
+        }
     }
 }

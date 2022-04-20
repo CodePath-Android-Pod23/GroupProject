@@ -51,7 +51,7 @@
             android:layout_weight="5"/>
 
         <Button
-            android:id="@+id/btn_signUp"
+            android:id="@+id/btn_saveChoices"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
