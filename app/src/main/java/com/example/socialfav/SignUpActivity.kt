@@ -43,7 +43,7 @@ class SignUpActivity : AppCompatActivity() {
         user.signUpInBackground { e ->
             if (e == null) {
                 Toast.makeText(this, "Sign up was successful!", Toast.LENGTH_SHORT).show()
-                Log.i(LoginActivity.TAG, "Successful Sigh Up")
+                Log.i(TAG, "Successful Sigh Up")
                 goToUserDetails()
             } else {
                 Toast.makeText(this, "Sign up was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
@@ -56,6 +56,10 @@ class SignUpActivity : AppCompatActivity() {
         val intent = Intent(this,UserDetails::class.java)
         startActivity(intent)
         finish()
+    }
+
+    companion object{
+        const val TAG = "SignUpActivity"
     }
 
 }

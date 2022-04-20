@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //TODO: uncomment this to have user persistence
 //        if(ParseUser.getCurrentUser()!=null){
 //            val intent = Intent(this,FavActivity::class.java)
 //            startActivity(intent)
@@ -34,27 +35,27 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        queryItems()
+        //queryItems()
     }
 
-    fun queryItems(){
-        val query: ParseQuery<Item> = ParseQuery.getQuery(Item::class.java)
-        query.findInBackground(object : FindCallback<Item>{
-            override fun done(items: MutableList<Item>?, e: ParseException?) {
-                if(e != null){
-                    Log.e(TAG, "Something went wrong with this query")
-                }else{
-                    if(items !=null){
-                        for(item in items){
-                            Log.i(TAG, "Movie: " + item.getTitle())
-                            Log.i(TAG, "Genres: " + item.getGenre())
-                        }
-                    }
-                }
-            }
-
-        })
-    }
+//    fun queryItems(){
+//        val query: ParseQuery<Item> = ParseQuery.getQuery(Item::class.java)
+//        query.findInBackground(object : FindCallback<Item>{
+//            override fun done(items: MutableList<Item>?, e: ParseException?) {
+//                if(e != null){
+//                    Log.e(TAG, "Something went wrong with this query")
+//                }else{
+//                    if(items !=null){
+//                        for(item in items){
+//                            Log.i(TAG, "Movie: " + item.getTitle())
+//                            Log.i(TAG, "Genres: " + item.getGenre())
+//                        }
+//                    }
+//                }
+//            }
+//
+//        })
+//    }
 
     companion object{
         const val TAG = "MainActivity"
