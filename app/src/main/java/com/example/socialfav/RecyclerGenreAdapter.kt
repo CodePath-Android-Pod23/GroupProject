@@ -3,8 +3,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.socialfav.R
+import com.google.android.material.card.MaterialCardView
 
 
 class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>() {
@@ -32,10 +34,22 @@ class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var genreName: TextView
+        var genreCard: MaterialCardView
+
 
         init {
             genreName = itemView.findViewById(R.id.tv_genreName)
+            genreCard = itemView.findViewById(R.id.genreCard)
+
+
+            //have to make custom checked function for cards
+            //Pijamo: Not sure if it shud exist here
+            genreCard.setOnClickListener{
+                genreCard.setChecked(!genreCard.isChecked)
+                true
+            }
         }
+
     }
 
 }
