@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -20,6 +21,12 @@ class LoginActivity : AppCompatActivity() {
             val username = findViewById<TextInputLayout>(R.id.et_username).editText?.text.toString()
             val password = findViewById<TextInputLayout>(R.id.et_password).editText?.text.toString()
             loginUser(username,password)
+        }
+
+        findViewById<ImageView>(R.id.iv_backbtn).setOnClickListener{
+            val intent = Intent( this, MainActivity::class.java )
+            startActivity(intent)
+            finish()
         }
 
     }

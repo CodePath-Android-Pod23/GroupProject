@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.parse.ParseObject
@@ -28,6 +29,12 @@ class SignUpActivity : AppCompatActivity() {
 //            val intent = Intent( this, userDetails::class.java )
 //            startActivity(intent)
 //            finish()
+        }
+
+        findViewById<ImageView>(R.id.iv_backbtn).setOnClickListener{
+            val intent = Intent( this, MainActivity::class.java )
+            startActivity(intent)
+            finish()
         }
     }
 
