@@ -44,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
             if (e == null) {
                 Toast.makeText(this, "Sign up was successful!", Toast.LENGTH_SHORT).show()
                 Log.i(TAG, "Successful Sigh Up")
-                goToUserDetails()
+                goToChoosingFavs()
             } else {
                 Toast.makeText(this, "Sign up was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
@@ -52,7 +52,10 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToUserDetails(){
+    private fun goToChoosingFavs(){
+        //TODO: Should lead to Choosing Favs Activity.Currently goes to UserDetails to test functionality
+
+        //val intent = Intent(this,FavActivity::class.java)
         val intent = Intent(this,UserDetails::class.java)
         startActivity(intent)
         finish()

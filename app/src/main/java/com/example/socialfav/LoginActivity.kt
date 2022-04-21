@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToFeed(){
-        //TODO: change this to Feed activity once created
+        //TODO: change this to Recommendations Feed once this activity is created
         val intent = Intent(this,FavActivity::class.java)
         startActivity(intent)
         finish()

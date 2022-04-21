@@ -46,7 +46,7 @@ class UserDetails : AppCompatActivity() {
             if (e == null) {
                 Toast.makeText(this, "Profile update was successful!", Toast.LENGTH_SHORT).show()
                 Log.i(TAG, "Successful Profile update")
-                goToChoosing()
+                goToProfileSettings()
             } else {
                 Toast.makeText(this, "Profile update was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
@@ -55,8 +55,9 @@ class UserDetails : AppCompatActivity() {
 
     }
 
-    private fun goToChoosing(){
-        val intent = Intent(this,FavActivity::class.java)
+    private fun goToProfileSettings(){
+        //TODO: Update the activity it leads to
+        val intent = Intent(this,UserProfileScreen::class.java)
         startActivity(intent)
         finish()
     }
