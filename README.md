@@ -31,11 +31,12 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 - [x] Configure Parse Server to store User and Item (movie) data
 - [x] Create a modern, responsive and user-friendly app UI design
 - [x] Determine the APIs used to get movie and book data
-- [ ] New users should be able to sign up and create a profile. 
-- [ ] Existing users should be able to log in and log out.
-- [ ] Users should be able to add and edit the information on their profile (location, contact information, etc.)
-- [ ] Users can select their favorite genres.
-- [ ] Users can view the list of recommendations (movies) based on their selected/favourite genres.
+- [x] New users should be able to sign up and create a profile. 
+- [x] Existing users should be able to log in.
+- [ ] Existing users should be able to log out.
+- [x] Users should be able to add and edit the information on their profile (location, contact information, etc.)
+- [x] Users can select their favorite genres.
+- [x] Users can view the list of recommendations (movies) based on their selected/favourite genres.
 - [ ] Users can view the detailed information of each movie.
 - [ ] Users should be able to see a list of other users in their location with similar interests.
 - [ ] Users should be able to view other users' profiles.
