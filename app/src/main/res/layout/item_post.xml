@@ -5,7 +5,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/rvFav">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -28,11 +29,11 @@
 
                     <!-- Media -->
                     <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="194dp"
-                        app:srcCompat="@color/secondary"
+                        android:id="@+id/ivPoster"
+                        android:layout_width="132dp"
+                        android:layout_height="162dp"
                         android:scaleType="centerCrop"
-                        />
+                        app:srcCompat="@color/secondary" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -42,45 +43,52 @@
 
                         <!-- Title, secondary and supporting text -->
                         <TextView
+                            android:id="@+id/tvTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Title"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/tvDescrbition"
+                            android:layout_width="226dp"
+                            android:layout_height="63dp"
                             android:layout_marginTop="8dp"
+                            android:maxLines="4"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary"
-                            />
+                            android:textSize="10sp" />
 
                         <!-- Buttons -->
                         <LinearLayout
+                            android:id="@+id/tvTags"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_height="40dp"
+
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="8dp"
-                                android:text="Genre 1"
-                                android:textColor="@color/white"
-                                android:backgroundTint="@color/secondary"
+                                android:id="@+id/tvTag1"
                                 style="?attr/borderlessButtonStyle"
-                                />
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:backgroundTint="@color/secondary"
+                                android:text="Genre 1"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="6sp" />
+
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/tvTag2"
+                                style="?attr/borderlessButtonStyle"
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/secondary"
                                 android:text="Genre 2"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/secondary"
-                                style="?attr/borderlessButtonStyle"
-                                />
+                                android:textSize="6sp" />
 
                         </LinearLayout>
 
