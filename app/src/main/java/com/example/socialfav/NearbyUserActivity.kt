@@ -38,7 +38,7 @@ class NearbyUserActivity : AppCompatActivity() {
                 } else {
                     if (posts != null) {
                         for (post in posts) {
-                            Log.i(MainActivity.TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
+//                            Log.i(MainActivity.TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
                         }
 //                        allPosts.addAll(posts)
 //                        adapter.notifyDataSetChanged()
