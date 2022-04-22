@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.parse.FindCallback
 import com.parse.ParseException
 import com.parse.ParseQuery
+import com.parse.ParseUser
 
 
 class MainActivity : AppCompatActivity() {
