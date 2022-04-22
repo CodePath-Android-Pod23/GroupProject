@@ -18,6 +18,12 @@ class UserDetails : AppCompatActivity() {
         findViewById<TextInputLayout>(R.id.et_email).editText?.setText(user.email)
         findViewById<TextInputLayout>(R.id.et_fullName).editText?.setText(user.getString("FullName"))
         findViewById<TextInputLayout>(R.id.et_username).editText?.setText(user.username)
+        if(!user.getString("Location").isNullOrEmpty()){
+            findViewById<TextInputLayout>(R.id.et_city).editText?.setText(user.getString("Location"))
+        }
+        if(!user.getString("PhoneNumber").isNullOrEmpty()){
+            findViewById<TextInputLayout>(R.id.et_phoneNumber).editText?.setText(user.getString("PhoneNumber"))
+        }
 
         findViewById<Button>(R.id.btn_saveProfile).setOnClickListener{
             val email = findViewById<TextInputLayout>(R.id.et_email).editText?.text.toString()
