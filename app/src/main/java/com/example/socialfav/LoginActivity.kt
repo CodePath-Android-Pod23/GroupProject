@@ -36,7 +36,6 @@ class LoginActivity : AppCompatActivity() {
             if (user != null) {
                 Toast.makeText(this, "Log in was successful!", Toast.LENGTH_SHORT).show()
                 Log.i(TAG, "Successful Log in")
-                // go to Favs feed/activity
                 goToFeed()
             } else {
                 Toast.makeText(this, "Log in was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
@@ -47,7 +46,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToFeed(){
-        //TODO: change this to Recommendations Feed once this activity is created
         val intent = Intent(this,FavActivity::class.java)
         startActivity(intent)
         finish()

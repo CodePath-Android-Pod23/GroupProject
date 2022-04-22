@@ -18,16 +18,21 @@ class UserDetails : AppCompatActivity() {
         findViewById<TextInputLayout>(R.id.et_email).editText?.setText(user.email)
         findViewById<TextInputLayout>(R.id.et_fullName).editText?.setText(user.getString("FullName"))
         findViewById<TextInputLayout>(R.id.et_username).editText?.setText(user.username)
+        if(!user.getString("Location").isNullOrEmpty()){
+            findViewById<TextInputLayout>(R.id.et_city).editText?.setText(user.getString("Location"))
+        }
+        if(!user.getString("PhoneNumber").isNullOrEmpty()){
+            findViewById<TextInputLayout>(R.id.et_phoneNumber).editText?.setText(user.getString("PhoneNumber"))
+        }
 
-
-        findViewById<Button>(R.id.btn_signUp).setOnClickListener{
+        findViewById<Button>(R.id.btn_saveProfile).setOnClickListener{
             val email = findViewById<TextInputLayout>(R.id.et_email).editText?.text.toString()
             val fullName = findViewById<TextInputLayout>(R.id.et_fullName).editText?.text.toString()
             val username = findViewById<TextInputLayout>(R.id.et_username).editText?.text.toString()
             val city = findViewById<TextInputLayout>(R.id.et_city).editText?.text.toString()
-            Log.i(TAG, city)
+            //Log.i(TAG, city)
             val number = findViewById<TextInputLayout>(R.id.et_phoneNumber).editText?.text.toString()
-            Log.i(TAG, number)
+            //Log.i(TAG, number)
             updateUserProfile(username,fullName, email, city,number)
 
         }
@@ -57,7 +62,9 @@ class UserDetails : AppCompatActivity() {
 
     private fun goToProfileSettings(){
         //TODO: Update the activity it leads to
-        val intent = Intent(this,UserProfileScreen::class.java)
+
+        val intent = Intent( this, GenreActivity::class.java )
+        //val intent = Intent(this,UserProfileScreen::class.java)
         startActivity(intent)
         finish()
     }

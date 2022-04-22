@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.parse.FindCallback
 import com.parse.ParseException
 import com.parse.ParseQuery
+import com.parse.ParseUser
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,13 +27,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_signIn).setOnClickListener{
             val intent = Intent( this, LoginActivity::class.java )
             startActivity(intent)
-            finish()
         }
 
         findViewById<Button>(R.id.btn_signUp).setOnClickListener{
             val intent = Intent( this, SignUpActivity::class.java )
             startActivity(intent)
-            finish()
         }
 
         //queryItems()
