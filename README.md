@@ -172,7 +172,7 @@ Items:
   <tr>
     <td>Item Id</td>
     <td>String</td>
-    <td>Unique id for the Item (default field)</td>
+    <td>Unique id for the item (default field)</td>
   </tr>
   <tr>
     <td>Item Type</td>
@@ -182,12 +182,12 @@ Items:
   <tr>
     <td>Title</td>
     <td>String</td>
-    <td>Title of the Book/Movie</td>
+    <td>Title of the Movie (or Book)</td>
   </tr>
   <tr>
     <td>Genre</td>
     <td>Array of String</td>
-    <td>Genres related to the Item</td>
+    <td>Genres related to the item</td>
   </tr>
   <tr>
     <td>Synopsis</td>
@@ -197,7 +197,7 @@ Items:
   <tr>
     <td>Image</td>
     <td>File</td>
-    <td>Image that defines the Item</td>
+    <td>Image that defines the item</td>
   </tr>
   <tr>
     <td>Recommended by</td>
@@ -287,6 +287,11 @@ Items:
 Here's a walkthrough of implemented user stories:
 
 <img src='sprint1.gif' title='Video Walkthrough for Sprint 1' width='' alt='Sprint 1 Video Walkthrough' />
+
+### Sprint 2
+Here's a walkthrough of implemented user stories:
+
+<img src='sprint2.gif' title='Video Walkthrough for Sprint 2' width='' alt='Sprint 2 Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
