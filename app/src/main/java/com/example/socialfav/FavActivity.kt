@@ -24,8 +24,12 @@ class FavActivity : AppCompatActivity() {
     private lateinit var rvMovies: RecyclerView
 //    var genre_id = listOf<Int>(80, 27, 35)
 
+    // TODO: key should be "Genres"
     var selected = ParseUser.getCurrentUser().getJSONArray("genres")
+    var test = ParseUser.getCurrentUser().getJSONArray("Genres")
 
+    // TODO: test the movies with selected genres from parse server
+    // TODO: when selected is not null, something is going wrong
     var genre_string =""
     fun combine(selected: JSONArray?): String {
         if (selected != null) {
@@ -53,6 +57,8 @@ class FavActivity : AppCompatActivity() {
 
         val client = AsyncHttpClient()
         Log.i(TAG, selected.toString())
+        // TODO: test Log statement prints list of genres but selected Log statement prints null
+        Log.i(TAG, test.toString())
         Log.i("genre_url",genre_url )
 
         client.get(GENRE_KEY, object : JsonHttpResponseHandler() {

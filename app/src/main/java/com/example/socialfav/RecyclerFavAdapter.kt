@@ -37,8 +37,8 @@ class RecyclerFavAdapter: RecyclerView.Adapter<RecyclerFavAdapter.ViewHolder>() 
         var tvDescription: TextView
 
         init {
-            tvTitle = itemView.findViewById(R.id.tv_title)
-            tvDescription = itemView.findViewById(R.id.tv_description)
+            tvTitle = itemView.findViewById(R.id.tvTitle)
+            tvDescription = itemView.findViewById(R.id.tvDescription)
         }
     }
 }

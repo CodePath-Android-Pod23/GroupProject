@@ -35,7 +35,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         private val tvPoster = itemView.findViewById<ImageView>(R.id.ivPoster)
         private val tvTitle = itemView.findViewById<TextView>(R.id.tvTitle)
-        private val tvoverview = itemView.findViewById<TextView>(R.id.tvDescrbition)
+        private val tvoverview = itemView.findViewById<TextView>(R.id.tvDescription)
         private val tvTag1 = itemView.findViewById<TextView>(R.id.tvTag1)
         private val tvTag2 = itemView.findViewById<TextView>(R.id.tvTag2)
         fun bind(movie: Movie){
