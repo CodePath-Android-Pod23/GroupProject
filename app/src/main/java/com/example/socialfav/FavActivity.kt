@@ -27,7 +27,15 @@ class FavActivity : AppCompatActivity() {
     private lateinit var rvMovies: RecyclerView
 //    var genre_id = listOf<Int>(80, 27, 35)
 
+
     var selected = ParseUser.getCurrentUser().getJSONArray("genres")
+    //TODO: Below is what you can used to get the array of genre object ids based on the users selection
+    //var selected = ParseUser.getCurrentUser().getJSONArray("GenreArr")
+    //TODO
+    //You can then use these ids to query the Genre class on the parse server
+    //Once you have the Genre parse object from the query, you can use the getGenreId func (See func in new Genre Class)
+    //Hope this helps!
+
 
     var genre_string =""
     fun combine(selected: JSONArray?): String {
@@ -38,8 +46,6 @@ class FavActivity : AppCompatActivity() {
         }
         return genre_string
     }
-
-
 
 
     private val genre_url = "https://api.themoviedb.org/3/discover/movie?api_key="+ MOVIE_KEY + combine(selected)
