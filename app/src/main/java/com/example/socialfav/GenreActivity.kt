@@ -2,22 +2,24 @@ package com.example.socialfav
 
 import RecyclerGenreAdapter
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.parse.ParseUser
+import com.parse.*
 import org.json.JSONArray
+
 
 class GenreActivity : AppCompatActivity() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>? = null
     private var genresChosen : MutableList<String> = arrayListOf()
+    private var genresPointers : MutableList<String> = arrayListOf()
+    private var genreArr: MutableList<Genre> = arrayListOf()
     private val user = ParseUser.getCurrentUser()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +37,15 @@ class GenreActivity : AppCompatActivity() {
 
         recyclerView.adapter = adapter
 
+        queryGenres()
 
         findViewById<Button>(R.id.btn_saveChoices).setOnClickListener {
             if (genresChosen.size >= 5) {
+                makePointerArr()
                 val userGenres = JSONArray(genresChosen)
+                val pointerArr = JSONArray(genresPointers)
                 user.put("Genres", userGenres)
+                user.put("GenreArr", pointerArr)
                 user.saveInBackground() { e ->
                     if (e == null) {
                         Toast.makeText(this, "Choices Saved!", Toast.LENGTH_SHORT).show()
@@ -60,6 +66,7 @@ class GenreActivity : AppCompatActivity() {
 
     private fun onItemClick(genre: String) {
         if (genresChosen.contains(genre)){
+            //TODO: convert to string to int based the map in the parse server
             genresChosen.remove(genre)
             //Toast.makeText(this, "Removed", Toast.LENGTH_SHORT).show()
         } else if (!genresChosen.contains(genre)){
@@ -68,9 +75,37 @@ class GenreActivity : AppCompatActivity() {
         }
     }
 
+    private fun makePointerArr(){
+        if(genreArr != null){
+            for(gen in genreArr){
+                if(genresChosen.contains(gen.getGenre())){
+                    genresPointers.add(gen.objectId)
+                }
+            }
+        }
+
+    }
+
+
+ private fun queryGenres(){
+     val query: ParseQuery<Genre> = ParseQuery.getQuery(Genre::class.java)
+        query.findInBackground(object : FindCallback<Genre>{
+            override fun done(genres: MutableList<Genre>?, e: ParseException?) {
+                if(e != null){
+                    Log.e(TAG, "Something went wrong with this query")
+                }else{
+                    if(genres !=null){
+                        genreArr.addAll(genres)
+                    }
+                }
+            }
+        })
+ }
+
     companion object{
         const val TAG = "GenreActivity"
     }
 }
+
 
 

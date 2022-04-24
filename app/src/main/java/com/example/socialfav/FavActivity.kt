@@ -10,6 +10,9 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.example.socialfav.model.Genre
 import com.example.socialfav.model.Genre.Companion.fromJson
 import com.example.socialfav.model.Movie
+import com.parse.FindCallback
+import com.parse.ParseException
+import com.parse.ParseQuery
 import okhttp3.Headers
 import org.json.JSONException
 import com.parse.ParseUser
@@ -24,12 +27,8 @@ class FavActivity : AppCompatActivity() {
     private lateinit var rvMovies: RecyclerView
 //    var genre_id = listOf<Int>(80, 27, 35)
 
-    // TODO: key should be "Genres"
     var selected = ParseUser.getCurrentUser().getJSONArray("genres")
-    var test = ParseUser.getCurrentUser().getJSONArray("Genres")
 
-    // TODO: test the movies with selected genres from parse server
-    // TODO: when selected is not null, something is going wrong
     var genre_string =""
     fun combine(selected: JSONArray?): String {
         if (selected != null) {
@@ -47,7 +46,6 @@ class FavActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fav)
-
 //        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 //        // Store the field now if you'd like without any need for casting
 //        rvMovies= binding.rvMovies
@@ -56,9 +54,7 @@ class FavActivity : AppCompatActivity() {
 
 
         val client = AsyncHttpClient()
-        Log.i(TAG, selected.toString())
-        // TODO: test Log statement prints list of genres but selected Log statement prints null
-        Log.i(TAG, test.toString())
+        //Log.i(TAG, selected.toString())
         Log.i("genre_url",genre_url )
 
         client.get(GENRE_KEY, object : JsonHttpResponseHandler() {
@@ -116,4 +112,5 @@ class FavActivity : AppCompatActivity() {
             }
         })
     }
+
 }

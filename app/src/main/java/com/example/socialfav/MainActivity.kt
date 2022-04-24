@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent( this, SignUpActivity::class.java )
             startActivity(intent)
         }
-
         //queryItems()
+
     }
 
 //    fun queryItems(){
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 //                        for(item in items){
 //                            Log.i(TAG, "Movie: " + item.getTitle())
 //                            Log.i(TAG, "Genres: " + item.getGenre())
+//                            Log.i(TAG, "ID: " + item.objectId)
 //                        }
 //                    }
 //                }

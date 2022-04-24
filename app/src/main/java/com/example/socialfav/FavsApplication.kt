@@ -11,6 +11,7 @@ class FavsApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         ParseObject.registerSubclass(Item::class.java)
+        ParseObject.registerSubclass(Genre::class.java)
         Parse.initialize(
             Parse.Configuration.Builder(this)
                 .applicationId(getString(R.string.back4app_app_id))
