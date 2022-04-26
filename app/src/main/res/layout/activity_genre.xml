@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
-            android:text="Choose Atleast 5 Favorite Genres"/>
+            android:text="Choose At least 5 Favorite Genres"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_search"

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvFav">
 
-<com.google.android.material.card.MaterialCardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"
+            android:layout_margin="2dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -24,67 +29,66 @@
 
                     <!-- Media -->
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="140dp"
-                        app:srcCompat="@color/secondary"
+                        android:id="@+id/ivPoster"
+                        android:layout_width="132dp"
+                        android:layout_height="162dp"
                         android:scaleType="centerCrop"
-                        />
+                        app:srcCompat="@color/secondary" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingHorizontal="5dp">
+                        android:padding="16dp">
 
                         <!-- Title, secondary and supporting text -->
                         <TextView
-                            android:id="@+id/tv_title"
+                            android:id="@+id/tvTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
                             android:text="Title"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
-                            android:id="@+id/tv_description"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/tvDescription"
+                            android:layout_width="226dp"
+                            android:layout_height="63dp"
                             android:layout_marginTop="8dp"
+                            android:maxLines="4"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
-                            android:textSize="12sp"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary"
-                            />
+                            android:textSize="10sp" />
 
                         <!-- Buttons -->
                         <LinearLayout
+                            android:id="@+id/tvTags"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginHorizontal="2dp"
+                            android:layout_height="40dp"
+
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="8dp"
-                                android:text="Genre 1"
-                                android:textSize="12sp"
-                                android:textColor="@color/white"
-                                android:backgroundTint="@color/secondary"
+                                android:id="@+id/tvTag1"
                                 style="?attr/borderlessButtonStyle"
-                                />
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:backgroundTint="@color/secondary"
+                                android:text="Genre 1"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="6sp" />
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Genre 2"
-                                android:textSize="12sp"
-                                android:textColor="@color/white"
-                                android:backgroundTint="@color/secondary"
+                                android:id="@+id/tvTag2"
                                 style="?attr/borderlessButtonStyle"
-                                />
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/secondary"
+                                android:text="Genre 2"
+                                android:textColor="@color/white"
+                                android:textSize="6sp" />
 
                         </LinearLayout>
 
@@ -103,53 +107,57 @@
 
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
 
 
 
-<!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:padding="20dp">&ndash;&gt;-->
-
-<!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;    android:id="@+id/iv_image"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_width="112dp"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_height="135dp"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:src="@color/black"/>&ndash;&gt;-->
-
-<!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_alignBottom="@id/iv_image"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_toEndOf="@id/iv_image"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_marginLeft="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/tv_itemName"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:textColor="@color/black"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:textStyle="bold"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:text="Movie Name" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/tv_description"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et." />&ndash;&gt;-->
 
 
-<!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--android:padding="20dp">-->
 
-<!--&lt;!&ndash;<TextView&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_below="@id/iv_image"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:text="Recommended By:"&ndash;&gt;-->
-<!--&lt;!&ndash;    android:layout_marginTop="20sp"/>&ndash;&gt;-->
+<!--<ImageView-->
+<!--    android:id="@+id/iv_image"-->
+<!--    android:layout_width="112dp"-->
+<!--    android:layout_height="135dp"-->
+<!--    android:src="@color/black"/>-->
 
-<!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+<!--<LinearLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_alignBottom="@id/iv_image"-->
+<!--    android:layout_toEndOf="@id/iv_image"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_marginLeft="10dp"-->
+<!--    >-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_itemName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="Movie Name" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_description"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et." />-->
+
+
+<!--</LinearLayout>-->
+
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_below="@id/iv_image"-->
+<!--    android:text="Recommended By:"-->
+<!--    android:layout_marginTop="20sp"/>-->
+
+<!--</RelativeLayout>-->

@@ -9,10 +9,11 @@ import com.example.socialfav.R
 import com.google.android.material.card.MaterialCardView
 
 
-class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>() {
+class RecyclerGenreAdapter (private val onItemClicked: (genre: String) -> Unit): RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>() {
 
     //sample array of genre for testing genre recyclerView
-    private var genre = arrayOf("Horror", "Comedy", "Action", "Adventure", "Drama", "Science Fiction", "Thriller", "Western", "Romance", "Musical", "Fantasy")
+    private var genre = arrayOf("Horror", "Comedy", "Action", "Adventure", "Drama", "Science Fiction", "Thriller", "Western", "Romance", "Music", "Fantasy")
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -20,7 +21,7 @@ class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder
     ): RecyclerGenreAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.genre_post, parent, false)
 
-        return ViewHolder(v)
+        return ViewHolder(v, onItemClicked)
     }
 
     override fun onBindViewHolder(holder: RecyclerGenreAdapter.ViewHolder, position: Int) {
@@ -32,7 +33,7 @@ class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder
         return genre.size
     }
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View, private val onItemClicked: (genre: String) -> Unit): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var genreName: TextView
         var genreCard: MaterialCardView
 
@@ -44,10 +45,18 @@ class RecyclerGenreAdapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder
 
             //have to make custom checked function for cards
             //Pijamo: Not sure if it shud exist here
-            genreCard.setOnClickListener{
-                genreCard.setChecked(!genreCard.isChecked)
-                true
-            }
+//            genreCard.setOnClickListener{
+//                genreCard.setChecked(!genreCard.isChecked)
+//                true
+//            }
+
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View) {
+            genreCard.setChecked(!genreCard.isChecked)
+            val genre = genreName.text.toString()
+            onItemClicked(genre)
         }
 
     }
