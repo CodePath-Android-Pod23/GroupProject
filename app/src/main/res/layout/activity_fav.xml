@@ -56,8 +56,8 @@
             android:layout_marginTop="30dp"
             android:layout_weight="5" />
 
-        <!--        <Button-->
-<!--            android:id="@+id/btn_signUp"-->
+<!--                <Button-->
+<!--            android:id="@+id/btn_nearby"-->
 <!--            style="@style/Widget.MaterialComponents.Button"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="70dp"-->
@@ -65,7 +65,7 @@
 <!--            android:layout_marginHorizontal="50dp"-->
 <!--            android:layout_marginTop="30dp"-->
 <!--            android:layout_marginBottom="20dp"-->
-<!--            android:text="Save Choices" />-->
+<!--            android:text="Find Nearby User" />-->
 
     </LinearLayout>
 

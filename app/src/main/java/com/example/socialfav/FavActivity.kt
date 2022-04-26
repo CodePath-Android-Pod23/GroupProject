@@ -1,8 +1,11 @@
 package com.example.socialfav
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
@@ -57,7 +60,11 @@ class FavActivity : AppCompatActivity() {
 //        rvMovies= binding.rvMovies
         // Or use the binding to update views directly on the binding
 
-
+//        // TODO: Delete after Test, navigate to nearby user page for testing
+//        findViewById<Button>(R.id.btn_nearby).setOnClickListener {
+//            val intent = Intent(this, NearbyUserActivity::class.java)
+//            startActivity(intent)
+//        }
 
         val client = AsyncHttpClient()
         //Log.i(TAG, selected.toString())
