@@ -6,67 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".FavActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="30dp">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_back"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Recommendations"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAllCaps="true"
-                />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textAllCaps="true"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:text="Choose Atleast 5 Favorite Genres"/>-->
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvFav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_weight="5" />
-
-<!--                <Button-->
-<!--            android:id="@+id/btn_nearby"-->
-<!--            style="@style/Widget.MaterialComponents.Button"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="70dp"-->
-<!--            android:layout_gravity="bottom"-->
-<!--            android:layout_marginHorizontal="50dp"-->
-<!--            android:layout_marginTop="30dp"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:text="Find Nearby User" />-->
-
-    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
