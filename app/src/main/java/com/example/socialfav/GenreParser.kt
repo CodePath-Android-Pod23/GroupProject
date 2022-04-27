@@ -1,37 +1,30 @@
 package com.example.socialfav
 
 import com.parse.ParseClassName
-import com.parse.ParseFile
 import com.parse.ParseObject
-import org.json.JSONArray
 
 @ParseClassName("Genre")
 class GenreParser: ParseObject() {
 
-
-    //GenreName
+    //genre
     fun getGenre(): String?{
-        return getString(KEY_TYPE)
+        return getString(KEY_GENRE)
     }
-    fun setGenre(type: String){
-        put(KEY_TYPE, type)
+//    fun setGenre(type: String){
+//        put(KEY_GENRE, type)
+//    }
+    //genreID
+    fun getGenreID(): Int?{
+        return getInt(KEY_GENRE_ID)
     }
+//    fun setGenreID(id: Int){
+//        put(KEY_GENRE_ID, id)
+//    }
 
 
 
-    //GenreId
-    fun getGenreId(): Int?{
-        return getInt(KEY_NUMRECS)
+    companion object {
+        const val KEY_GENRE = "genre"
+        const val KEY_GENRE_ID = "genreid"
     }
-    fun setGenreId(GenreId : Int){
-        put(KEY_NUMRECS, GenreId)
-    }
-
-
-
-    companion object{
-        const val KEY_TYPE = "genre"
-        const val KEY_NUMRECS = "genreid"
-    }
-
 }

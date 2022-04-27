@@ -1,17 +1,39 @@
-package com.example.socialfav
+package com.example.socialfav.fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.parse.FindCallback
-import com.parse.ParseException
-import com.parse.ParseQuery
-import com.parse.ParseUser
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.socialfav.NearbyAdapter
+import com.example.socialfav.R
+import com.parse.*
 
-class NearbyUserActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nearby_user)
+
+class NearbyFragment : Fragment() {
+
+    lateinit var usersRecyclerView: RecyclerView
+    lateinit var adapter: NearbyAdapter
+
+    var nearbyUsers = ArrayList<ParseUser>()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_nearby, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        usersRecyclerView = view.findViewById(R.id.rv_users)
+        adapter = NearbyAdapter(requireContext(), nearbyUsers)
+        usersRecyclerView.adapter = adapter
+        usersRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         queryUsers()
     }
 
@@ -51,8 +73,8 @@ class NearbyUserActivity : AppCompatActivity() {
                         for (user in users) {
                             Log.i(TAG, "User: " + user.getString("FullName") + " , Location: " + user.getString("Location"))
                         }
-//                        allPosts.addAll(posts)
-//                        adapter.notifyDataSetChanged()
+                        nearbyUsers.addAll(users)
+                        adapter.notifyDataSetChanged()
 //                        swipeContainer.setRefreshing(false)
                     }
                 }
@@ -61,7 +83,6 @@ class NearbyUserActivity : AppCompatActivity() {
     }
 
     companion object{
-        const val TAG = "NearbyUserActivity"
+        const val TAG = "NearbyFragment"
     }
-
 }

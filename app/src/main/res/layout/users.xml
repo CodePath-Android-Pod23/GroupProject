@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvFav">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="2dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/cv_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_avatar_image"
+                         />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_weight="1">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Anne Southern"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:id="@+id/tv_City"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="4"
+                            android:text="New York"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/outlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Friend"
+                        app:strokeColor="@color/primary"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_gravity="end|center"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipMinHeight="25dp"
+                        android:gravity="center"
+                        android:textSize="8sp"
+                        android:text="Comedy"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipMinHeight="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="8sp"
+                        android:text="History"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:chipMinHeight="25dp"
+                        android:textSize="8sp"
+                        android:text="Action"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tag4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:chipMinHeight="25dp"
+                        android:textSize="8sp"
+                        android:text="Adventure"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tag5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:chipMinHeight="25dp"
+                        android:textSize="8sp"
+                        android:text="Horror"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+
+
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--android:padding="20dp">-->
+
+<!--<ImageView-->
+<!--    android:id="@+id/iv_image"-->
+<!--    android:layout_width="112dp"-->
+<!--    android:layout_height="135dp"-->
+<!--    android:src="@color/black"/>-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_alignBottom="@id/iv_image"-->
+<!--    android:layout_toEndOf="@id/iv_image"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_marginLeft="10dp"-->
+<!--    >-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_itemName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="Movie Name" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_description"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et." />-->
+
+
+<!--</LinearLayout>-->
+
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_below="@id/iv_image"-->
+<!--    android:text="Recommended By:"-->
+<!--    android:layout_marginTop="20sp"/>-->
+
+<!--</RelativeLayout>-->
