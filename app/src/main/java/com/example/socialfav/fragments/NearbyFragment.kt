@@ -6,15 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.socialfav.NearbyAdapter
 import com.example.socialfav.NearbyUserActivity
 import com.example.socialfav.R
-import com.parse.FindCallback
-import com.parse.ParseException
-import com.parse.ParseQuery
-import com.parse.ParseUser
+import com.parse.*
 
 
 class NearbyFragment : Fragment() {
+
+    lateinit var usersRecyclerView: RecyclerView
+    lateinit var adapter: NearbyAdapter
+
+    var nearbyUsers = ArrayList<ParseUser>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +31,12 @@ class NearbyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        queryUsers()
+        usersRecyclerView = view.findViewById(R.id.rv_users)
+        adapter = NearbyAdapter(requireContext(), nearbyUsers as ArrayList<ParseUser>)
+        usersRecyclerView.adapter = adapter
+        usersRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        queryUsers()
     }
 
     private fun queryUsers() {
@@ -64,8 +75,8 @@ class NearbyFragment : Fragment() {
                         for (user in users) {
                             Log.i(NearbyUserActivity.TAG, "User: " + user.getString("FullName") + " , Location: " + user.getString("Location"))
                         }
-//                        allPosts.addAll(posts)
-//                        adapter.notifyDataSetChanged()
+                        nearbyUsers.addAll(users)
+                        adapter.notifyDataSetChanged()
 //                        swipeContainer.setRefreshing(false)
                     }
                 }
