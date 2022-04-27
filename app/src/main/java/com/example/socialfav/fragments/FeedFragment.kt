@@ -2,7 +2,6 @@ package com.example.socialfav.fragments
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,11 +12,13 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.example.socialfav.*
 import com.example.socialfav.model.Genre
 import com.example.socialfav.model.Movie
+import com.parse.FindCallback
+import com.parse.ParseException
+import com.parse.ParseQuery
 import com.parse.ParseUser
 import okhttp3.Headers
-import org.json.JSONArray
 import org.json.JSONException
-
+import androidx.fragment.app.Fragment
 
 private const val TAG = "FAVActivity"
 private const val MOVIE_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
@@ -26,9 +27,11 @@ private const val GENRE_KEY = "https://api.themoviedb.org/3/genre/movie/list?api
 class FeedFragment : Fragment() {
 
     private val movies = ArrayList<Movie>()
-    private val genres = HashMap<Int, String>()
+    val genres = HashMap<Int, String>()
     //    var genre_id = listOf<Int>(80, 27, 35)
 
+    var selected_genreParser: MutableList<GenreParser> = mutableListOf()
+    var selected_genres= HashMap<Int?, String?>()
 
     var selected = ParseUser.getCurrentUser().getJSONArray("genres")
     //TODO: Below is what you can used to get the array of genre object ids based on the users selection
@@ -37,20 +40,6 @@ class FeedFragment : Fragment() {
     //You can then use these ids to query the Genre class on the parse server
     //Once you have the Genre parse object from the query, you can use the getGenreId func (See func in new Genre Class)
     //Hope this helps!
-
-
-    var genre_string =""
-    fun combine(selected: JSONArray?): String {
-        if (selected != null) {
-            for (i in 0 until selected.length()){
-                genre_string += ("&with_genres=" + selected.getInt(i).toString())
-            }
-        }
-        return genre_string
-    }
-
-
-    private val genre_url = "https://api.themoviedb.org/3/discover/movie?api_key="+ MOVIE_KEY + combine(selected)
 
     private lateinit var rvMovies: RecyclerView
     lateinit var adapter: MovieAdapter
@@ -65,12 +54,56 @@ class FeedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        queryGenre(view)
 
+    }
+
+    fun queryGenre(view: View) {
+        // Specify which class to query
+
+        val query: ParseQuery<GenreParser> = ParseQuery.getQuery("Genre")
+
+        var selected = ParseUser.getCurrentUser().getJSONArray("GenreArr")
+        var selected_str = mutableListOf<String>()
+        if (selected != null) {
+            for (i in 0 until selected.length()) {
+                selected_str.add(selected.get(i).toString())
+            }
+        }
+        Log.i(TAG, "$selected")
+//        query.whereEqualTo("genreid", 28)
+        query.whereContainedIn("objectId",selected_str)
+
+        query.findInBackground(object : FindCallback<GenreParser> {
+            override fun done(genreParsers: MutableList<GenreParser>?, e: ParseException?) {
+                Log.i(TAG, "Query start")
+                if (e != null) {
+                    // something went wrong
+                    Log.e(TAG, "Error fetching posts")
+                } else {
+                    if (genreParsers != null) {
+                        for (genre in genreParsers) {
+                            Log.i(
+                                TAG,
+                                "GenreId:" + genre.getGenreID() + ", Genre: " + genre.getGenre()
+                            )
+                            selected_genres.put(genre.getGenreID(),genre.getGenre())
+                        }
+                        selected_genreParser.addAll(genreParsers)
+                        val genre_url = "https://api.themoviedb.org/3/discover/movie?api_key="+ MOVIE_KEY + combine() + "&sort_by=popularity.desc"
+                        getGenreList()
+                        getFav( view,genre_url)
+                    } else {
+                        Log.i(TAG, "No match")
+                    }
+                }
+            }
+        })
+    }
+
+    fun getGenreList() {
         val client = AsyncHttpClient()
-        //Log.i(TAG, selected.toString())
-        Log.i("genre_url",genre_url )
-
-        client.get(GENRE_KEY, object : JsonHttpResponseHandler() {
+        client.get(com.example.socialfav.GENRE_KEY, object : JsonHttpResponseHandler() {
             override fun onFailure(
                 statusCode: Int,
                 headers: Headers?,
@@ -81,12 +114,13 @@ class FeedFragment : Fragment() {
             }
 
             override fun onSuccess(statusCode: Int, headers: Headers?, json: JSON) {
+//                Log.i(TAG, "onSuccess: JSON date $json")
                 try {
                     val genreJsonArray = json.jsonObject.getJSONArray("genres")
                     val genreRaw = ArrayList<Genre>()
                     genreRaw.addAll(Genre.fromJsonArray(genreJsonArray))
-                    for (genre in genreRaw){
-                        genres.put(genre.genreId,genre.genreName)
+                    for (genre in genreRaw) {
+                        genres.put(genre.genreId, genre.genreName)
                     }
 
                 } catch (e: JSONException) {
@@ -95,12 +129,14 @@ class FeedFragment : Fragment() {
             }
 
         })
+    }
 
+    fun getFav(view: View, genre_url: String){
+        val client = AsyncHttpClient()
         rvMovies = view.findViewById(R.id.rvFav)
-        val movieAdapter= MovieAdapter(requireContext(), movies.genres)
+        val movieAdapter= MovieAdapter(requireContext(), movies, genres, selected_genres)
         rvMovies.adapter = movieAdapter
-        rvMovies.layoutManager = LinearLayoutManager(requireContext())
-
+        rvMovies.layoutManager = LinearLayoutManager(context)
 
         client.get(genre_url, object: JsonHttpResponseHandler() {
             override fun onFailure(
@@ -124,5 +160,17 @@ class FeedFragment : Fragment() {
                 }
             }
         })
+    }
+
+    fun combine(): String {
+        var genre_string = ""
+        for (i in 0 until this.selected_genreParser.size){
+
+            val id = this.selected_genreParser.get(i).getGenreID()
+            if(id != null) {
+                genre_string += ("&with_genres=" + id)
+            }
+        }
+        return genre_string
     }
 }
