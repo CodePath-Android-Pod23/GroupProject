@@ -4,7 +4,7 @@ import com.parse.ParseClassName
 import com.parse.ParseObject
 
 @ParseClassName("Genre")
-class Genre: ParseObject() {
+class GenreParser: ParseObject() {
 
     //genre
     fun getGenre(): String?{

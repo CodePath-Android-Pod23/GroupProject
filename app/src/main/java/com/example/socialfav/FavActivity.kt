@@ -73,7 +73,7 @@ class FavActivity : AppCompatActivity() {
     fun combine(): String {
         for (i in 0 until selected_genreParser.size){
 
-            val id = selected_genreParser.get(i).getGenreId()
+            val id = selected_genreParser.get(i).getGenreID()
             if(id != null) {
                 genre_string += ("&with_genres=" + id)
             }
@@ -110,9 +110,9 @@ class FavActivity : AppCompatActivity() {
                         for (genre in genreParsers) {
                             Log.i(
                                 TAG,
-                                "GenreId:" + genre.getGenreId() + ", Genre: " + genre.getGenre()
+                                "GenreId:" + genre.getGenreID() + ", Genre: " + genre.getGenre()
                             )
-                            selected_genres.put(genre.getGenreId(),genre.getGenre())
+                            selected_genres.put(genre.getGenreID(),genre.getGenre())
                         }
                         selected_genreParser.addAll(genreParsers)
                         val genre_url = "https://api.themoviedb.org/3/discover/movie?api_key="+ MOVIE_KEY + combine() + "&sort_by=popularity.desc"

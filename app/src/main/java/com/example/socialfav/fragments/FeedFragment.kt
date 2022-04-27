@@ -97,7 +97,7 @@ class FeedFragment : Fragment() {
         })
 
         rvMovies = view.findViewById(R.id.rvFav)
-        val movieAdapter= MovieAdapter(requireContext(), movies,genres)
+        val movieAdapter= MovieAdapter(requireContext(), movies.genres)
         rvMovies.adapter = movieAdapter
         rvMovies.layoutManager = LinearLayoutManager(requireContext())
 

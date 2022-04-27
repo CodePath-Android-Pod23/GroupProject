@@ -19,7 +19,7 @@ class GenreActivity : AppCompatActivity() {
     private var adapter: RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>? = null
     private var genresChosen : MutableList<String> = arrayListOf()
     private var genresPointers : MutableList<String> = arrayListOf()
-    private var genreArr: MutableList<Genre> = arrayListOf()
+    private var genreParserArr: MutableList<GenreParser> = arrayListOf()
     private val user = ParseUser.getCurrentUser()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,8 +76,8 @@ class GenreActivity : AppCompatActivity() {
     }
 
     private fun makePointerArr(){
-        if(genreArr != null){
-            for(gen in genreArr){
+        if(genreParserArr != null){
+            for(gen in genreParserArr){
                 if(genresChosen.contains(gen.getGenre())){
                     genresPointers.add(gen.objectId)
                 }
@@ -88,14 +88,14 @@ class GenreActivity : AppCompatActivity() {
 
 
  private fun queryGenres(){
-     val query: ParseQuery<Genre> = ParseQuery.getQuery(Genre::class.java)
-        query.findInBackground(object : FindCallback<Genre>{
-            override fun done(genres: MutableList<Genre>?, e: ParseException?) {
+     val query: ParseQuery<GenreParser> = ParseQuery.getQuery(GenreParser::class.java)
+        query.findInBackground(object : FindCallback<GenreParser>{
+            override fun done(genres: MutableList<GenreParser>?, e: ParseException?) {
                 if(e != null){
                     Log.e(TAG, "Something went wrong with this query")
                 }else{
                     if(genres !=null){
-                        genreArr.addAll(genres)
+                        genreParserArr.addAll(genres)
                     }
                 }
             }
