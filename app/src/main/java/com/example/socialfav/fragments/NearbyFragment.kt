@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.socialfav.NearbyAdapter
-import com.example.socialfav.NearbyUserActivity
 import com.example.socialfav.R
 import com.parse.*
 
@@ -31,9 +30,8 @@ class NearbyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        queryUsers()
         usersRecyclerView = view.findViewById(R.id.rv_users)
-        adapter = NearbyAdapter(requireContext(), nearbyUsers as ArrayList<ParseUser>)
+        adapter = NearbyAdapter(requireContext(), nearbyUsers)
         usersRecyclerView.adapter = adapter
         usersRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         queryUsers()
@@ -46,8 +44,8 @@ class NearbyFragment : Fragment() {
         val location = currentUser.getString("Location")
         val genres = currentUser.getJSONArray("Genres")
         val id = currentUser.objectId
-        Log.i(NearbyUserActivity.TAG, "Current user location is " + location)
-        Log.i(NearbyUserActivity.TAG, "genres size is " + genres?.length())
+        Log.i(TAG, "Current user location is " + location)
+        Log.i(TAG, "genres size is " + genres?.length())
         // 2. query to get users with the same location and at least one of the favorite genres
         val queries = ArrayList<ParseQuery<ParseUser>>()
         if (genres != null) {
@@ -69,11 +67,11 @@ class NearbyFragment : Fragment() {
             override fun done(users: MutableList<ParseUser>?, e: ParseException?) {
                 if (e != null) {
                     // Something has went wrong
-                    Log.e(NearbyUserActivity.TAG, "Error fetching users")
+                    Log.e(TAG, "Error fetching users")
                 } else {
                     if (users != null) {
                         for (user in users) {
-                            Log.i(NearbyUserActivity.TAG, "User: " + user.getString("FullName") + " , Location: " + user.getString("Location"))
+                            Log.i(TAG, "User: " + user.getString("FullName") + " , Location: " + user.getString("Location"))
                         }
                         nearbyUsers.addAll(users)
                         adapter.notifyDataSetChanged()
@@ -82,5 +80,9 @@ class NearbyFragment : Fragment() {
                 }
             }
         })
+    }
+
+    companion object{
+        const val TAG = "NearbyFragment"
     }
 }
