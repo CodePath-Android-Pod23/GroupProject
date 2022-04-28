@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.socialfav">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START"/>
+        </intent>
+    </queries>
     <application
         android:name=".FavsApplication"
         android:allowBackup="true"
@@ -27,10 +32,10 @@
             android:name=".UserProfileScreen"
             android:exported="false" />
         <activity
-            android:name=".NearbyUserActivity"
+            android:name=".FavActivity"
             android:exported="false" />
         <activity
-            android:name=".FavActivity"
+            android:name=".DetailActivity"
             android:exported="false" />
         <activity
             android:name=".GenreActivity"
@@ -44,10 +49,6 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
