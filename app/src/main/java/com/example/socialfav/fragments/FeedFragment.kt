@@ -103,7 +103,7 @@ class FeedFragment : Fragment() {
 
     fun getGenreList() {
         val client = AsyncHttpClient()
-        client.get(com.example.socialfav.GENRE_KEY, object : JsonHttpResponseHandler() {
+        client.get(GENRE_KEY, object : JsonHttpResponseHandler() {
             override fun onFailure(
                 statusCode: Int,
                 headers: Headers?,

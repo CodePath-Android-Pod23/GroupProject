@@ -12,7 +12,8 @@ import com.google.android.material.card.MaterialCardView
 class RecyclerGenreAdapter (private val onItemClicked: (genre: String) -> Unit): RecyclerView.Adapter<RecyclerGenreAdapter.ViewHolder>() {
 
     //sample array of genre for testing genre recyclerView
-    private var genre = arrayOf("Horror", "Comedy", "Action", "Adventure", "Drama", "Science Fiction", "Thriller", "Western", "Romance", "Music", "Fantasy")
+    private var genre = arrayOf("Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History",
+        "Horror", "Music", "Mystery", "Romance", "Science Fiction", "Thriller", "War", "Western")
 
 
     override fun onCreateViewHolder(

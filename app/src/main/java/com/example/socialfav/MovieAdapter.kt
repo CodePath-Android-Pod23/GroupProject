@@ -14,7 +14,6 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.socialfav.fragments.FeedFragment
 import com.example.socialfav.model.Movie
 val Movie_Extra = "Movie"
 

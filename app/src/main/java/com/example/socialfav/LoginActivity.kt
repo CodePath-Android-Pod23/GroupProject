@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.parse.ParseUser
 
@@ -46,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToFeed(){
-        val intent = Intent(this,FavActivity::class.java)
+        val intent = Intent(this, FavActivity::class.java)
         startActivity(intent)
         finish()
     }
