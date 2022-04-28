@@ -34,12 +34,6 @@ class FeedFragment : Fragment() {
     var selected_genres= HashMap<Int?, String?>()
 
     var selected = ParseUser.getCurrentUser().getJSONArray("genres")
-    //TODO: Below is what you can used to get the array of genre object ids based on the users selection
-    //var selected = ParseUser.getCurrentUser().getJSONArray("GenreArr")
-    //TODO
-    //You can then use these ids to query the Genre class on the parse server
-    //Once you have the Genre parse object from the query, you can use the getGenreId func (See func in new Genre Class)
-    //Hope this helps!
 
     private lateinit var rvMovies: RecyclerView
     lateinit var adapter: MovieAdapter

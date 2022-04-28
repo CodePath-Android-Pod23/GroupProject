@@ -11,12 +11,12 @@ import com.bumptech.glide.Glide
 import com.parse.ParseUser
 
 
-class NearbyAdapter(private val context: Context, private val nearbyUsers: List<ParseUser>)
+class NearbyAdapter(private val context: Context, private val nearbyUsers: List<ParseUser>, private val onBtnClicked: (friendID: String) -> Unit)
     : RecyclerView.Adapter<NearbyAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NearbyAdapter.ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.users,parent,false)
 
-        return ViewHolder(view)
+        return ViewHolder(view, onBtnClicked)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -28,7 +28,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         return nearbyUsers.size
     }
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View, private val onBtnClicked: (friendID: String) -> Unit): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         private val tvName = itemView.findViewById<TextView>(R.id.tv_name)
         private val tvCity = itemView.findViewById<TextView>(R.id.tv_City)
         private val tvTag1 = itemView.findViewById<TextView>(R.id.tag1)
@@ -36,10 +36,12 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         private val tvTag3 = itemView.findViewById<TextView>(R.id.tag3)
         private val tvTag4 = itemView.findViewById<TextView>(R.id.tag4)
         private val tvTag5 = itemView.findViewById<TextView>(R.id.tag5)
+        lateinit var friendID: String
         fun bind(user: ParseUser){
             tvName.text = user.getString("FullName")
             tvCity.text = user.getString("Location")
 //            Glide.with(context).load(movie.posterImageUrl).into(tvPoster)
+            friendID = user.objectId
 
             tvTag1.text = user.getJSONArray("Genres")?.getString(0)
             tvTag2.text = user.getJSONArray("Genres")?.getString(1)
@@ -47,5 +49,15 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
             tvTag4.text = user.getJSONArray("Genres")?.getString(3)
             tvTag5.text = user.getJSONArray("Genres")?.getString(4)
         }
+
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View) {
+            onBtnClicked(friendID)
+        }
+
     }
 }

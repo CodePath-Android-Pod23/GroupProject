@@ -1,16 +1,21 @@
 package com.example.socialfav.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.socialfav.FavActivity
+import com.example.socialfav.GenreActivity
 import com.example.socialfav.NearbyAdapter
 import com.example.socialfav.R
 import com.parse.*
+import org.json.JSONArray
 
 
 class NearbyFragment : Fragment() {
@@ -31,10 +36,44 @@ class NearbyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         usersRecyclerView = view.findViewById(R.id.rv_users)
-        adapter = NearbyAdapter(requireContext(), nearbyUsers)
+        adapter = NearbyAdapter(requireContext(), nearbyUsers) { friendID ->
+            onAddFriendClick(
+                friendID
+            )
+        }
         usersRecyclerView.adapter = adapter
         usersRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         queryUsers()
+    }
+
+    private fun onAddFriendClick(friendID: String){
+        val currentUser: ParseUser = ParseUser.getCurrentUser()
+        var friendArr: JSONArray? = currentUser?.getJSONArray("Friends")
+        fun JSONArray.toMutableList(): MutableList<Any> = MutableList(length(), this::get)
+        Log.e(TAG, "Error making mutable list from json")
+        var list :MutableList<Any> = arrayListOf()
+        if (friendArr != null) {
+            Log.i(TAG, "Friend list was not null")
+             list = friendArr.toMutableList()
+             if(!list.contains(friendID)){
+                     list.add(friendID)
+                 }
+        }else{
+            Log.i(TAG, "Friend list was empty. Adding friend")
+            list.add(friendID)
+        }
+        val arr = JSONArray(list)
+        currentUser.put("Friends", arr)
+
+        currentUser.saveInBackground() { e ->
+            if (e == null) {
+                Toast.makeText(this.requireContext(), "Friend Added!", Toast.LENGTH_SHORT).show()
+                Log.i(TAG, "Friend added to Profile")
+            } else {
+                //Toast.makeText(this, "Update was unsuccessful.", Toast.LENGTH_SHORT).show()
+                e.printStackTrace()
+            }
+        }
     }
 
     private fun queryUsers() {
@@ -86,3 +125,4 @@ class NearbyFragment : Fragment() {
         const val TAG = "NearbyFragment"
     }
 }
+
