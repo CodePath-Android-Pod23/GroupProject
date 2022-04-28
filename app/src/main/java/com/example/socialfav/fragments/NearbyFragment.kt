@@ -20,8 +20,6 @@ class NearbyFragment : Fragment() {
 
     lateinit var usersRecyclerView: RecyclerView
     lateinit var adapter: NearbyAdapter
-//    var FriendList :MutableList<Any> = arrayListOf()
-//    val currentUser: ParseUser = ParseUser.getCurrentUser()
     var nearbyUsers = ArrayList<ParseUser>()
 
     override fun onCreateView(

@@ -110,7 +110,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
                 Toast.makeText(context, "Friends updated!", Toast.LENGTH_SHORT).show()
                 Log.i(TAG, "Friend list updated on Parse")
             } else {
-                //Toast.makeText(this, "Update was unsuccessful.", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "Update was unsuccessful.", Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
             }
         }
