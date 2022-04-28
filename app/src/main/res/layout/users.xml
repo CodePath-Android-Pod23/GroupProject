@@ -6,6 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:id="@+id/rvFav">
 
         <com.google.android.material.card.MaterialCardView
@@ -19,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="25dp">
 
                 <LinearLayout
                     android:id="@+id/cv_item"
@@ -41,7 +42,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp"
+                        android:paddingLeft="16dp"
+                        android:layout_gravity="center"
                         android:layout_weight="1">
 
                         <!-- Title, secondary and supporting text -->
@@ -49,6 +51,7 @@
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="16dp"
                             android:text="Anne Southern"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -70,6 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Add Friend"
+                        android:textSize="12dp"
                         app:strokeColor="@color/primary"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_gravity="end|center"
