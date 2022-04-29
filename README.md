@@ -43,7 +43,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 **Optional Nice-to-have Stories**
 
 - [ ] Users can send messages to people who have the similar tastes with them.
-- [ ] Users should be able to view other users' profiles.
+- [ ] Users can view other users' profiles.
 - [ ] Users also can organize virtual and offline events to meet up.
 - [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
 - [ ] Users can get recommendations (books) based on their selected/favourite genres.
@@ -72,7 +72,7 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 **Tab Navigation** (Tab to Screen)
 
 * Home (Recommendations)
-* People
+* Nearby
 * Profile
 
   **Optional Nice-to-have**
@@ -83,8 +83,8 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 
 * Forced Log-in -> Account creation if no log in is available
 * Genres selection screen (new users can select their favourite genres, or update their previous choices) -> Jumps to Recommendation Feed
-* Recommendation Feed -> Jumps to item details (books, movies etc.)
-* People -> Jumps to user profile 
+* Recommendation Feed -> Jumps to item details (movies, books etc.)
+* Nearby -> Jumps to user profile 
 * Profile/Setting -> Text field to modified (for user's own profile), Log-out option
 
 ## Wireframes
