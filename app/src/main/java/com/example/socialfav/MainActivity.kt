@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //TODO: uncomment this to have user persistence
-//        if(ParseUser.getCurrentUser()!=null){
-//            val intent = Intent(this,FavActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+        if(ParseUser.getCurrentUser()!=null){
+            val intent = Intent(this,FavActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         findViewById<Button>(R.id.btn_signIn).setOnClickListener{
             val intent = Intent( this, LoginActivity::class.java )
