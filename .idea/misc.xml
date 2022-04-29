@@ -10,6 +10,8 @@
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_baseline_person_pin_circle_24.xml" value="0.323" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_button___next.xml" value="0.323" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_image.xml" value="0.341" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_toggle.xml" value="0.2005" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_toggle_bg.xml" value="0.2005" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_details.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_fav.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_genre.xml" value="0.33" />
@@ -30,8 +32,8 @@
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_nearby.xml" value="0.33695652173913043" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/genre_post.xml" value="0.25" />
-        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/item_post.xml" value="0.33" />
-        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/users.xml" value="0.5" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/item_post.xml" value="0.5" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/users.xml" value="0.35261194029850745" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.38697916666666665" />
       </map>
     </option>
