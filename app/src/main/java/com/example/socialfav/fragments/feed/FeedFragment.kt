@@ -132,7 +132,7 @@ class FeedFragment : Fragment() {
     fun getFav(view: View, genre_url: String){
         val client = AsyncHttpClient()
         rvMovies = view.findViewById(R.id.rvFav)
-        val movieAdapter= MovieAdapter(requireContext(), movies, genres, selected_genres)
+        val movieAdapter = MovieAdapter(requireContext(), movies, genres, selected_genres)
         rvMovies.adapter = movieAdapter
         rvMovies.layoutManager = LinearLayoutManager(context)
 
