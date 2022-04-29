@@ -29,7 +29,16 @@
                     android:orientation="horizontal">
 
                     <!-- Media -->
-                    <ImageView
+
+                    <LinearLayout
+                        android:id="@+id/user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
                         android:id="@+id/iv_avatar"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -38,34 +47,35 @@
                         android:src="@drawable/ic_avatar_image"
                          />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingLeft="16dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1">
-
-                        <!-- Title, secondary and supporting text -->
-                        <TextView
-                            android:id="@+id/tv_name"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="Anne Southern"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
+                            android:orientation="vertical"
+                            android:paddingLeft="16dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/tv_City"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:maxLines="4"
-                            android:text="New York"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="10sp" />
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="Anne Southern"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
 
+                            <TextView
+                                android:id="@+id/tv_City"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:maxLines="4"
+                                android:text="New York"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
                     <Button

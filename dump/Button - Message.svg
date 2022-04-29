@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="70" viewBox="0 0 154 70">
+  <defs>
+    <filter id="BG" x="0" y="0" width="154" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#18519f" flood-opacity="0.02"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_-_Message" data-name="Button - Message" transform="translate(15 7)">
+    <g transform="matrix(1, 0, 0, 1, -15, -7)" filter="url(#BG)">
+      <g id="BG-2" data-name="BG" transform="translate(15 7)" fill="#fff" stroke="#eee" stroke-width="0.6">
+        <rect width="124" height="40" rx="20" stroke="none"/>
+        <rect x="0.3" y="0.3" width="123.4" height="39.4" rx="19.7" fill="none"/>
+      </g>
+    </g>
+    <text id="Message" transform="translate(56 23.75)" fill="#626262" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Message</tspan></text>
+    <g id="Chat_Icon" data-name="Chat Icon" transform="translate(27.5 5.943)">
+      <path id="Path_1" data-name="Path 1" d="M11.5,23.307a.724.724,0,0,1-.554-.252l-2.8-3H3.23a.726.726,0,0,1-.73-.721V8.029a.726.726,0,0,1,.73-.722H19.771a.726.726,0,0,1,.729.722V19.336a.726.726,0,0,1-.73.722H14.851l-2.814,3.017A.735.735,0,0,1,11.5,23.307ZM3.959,18.613H8.468A.736.736,0,0,1,9,18.846l2.5,2.676,2.495-2.676a.736.736,0,0,1,.537-.232h4.509V8.75H3.959Z" transform="translate(0)" fill="#0f393a"/>
+      <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="0.794" cy="0.793" rx="0.794" ry="0.793" transform="translate(7.589 12.975)" fill="#0f393a"/>
+      <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="0.794" cy="0.793" rx="0.794" ry="0.793" transform="translate(10.706 12.975)" fill="#0f393a"/>
+      <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="0.794" cy="0.793" rx="0.794" ry="0.793" transform="translate(13.823 12.975)" fill="#0f393a"/>
+    </g>
+    <g id="Online_Status" data-name="Online Status" transform="translate(14 15)" fill="#0f9804" stroke="#f6f5ee" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+  </g>
+</svg>
