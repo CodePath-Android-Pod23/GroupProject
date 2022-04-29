@@ -12,6 +12,7 @@ import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 import okhttp3.Headers
+import org.w3c.dom.Text
 
 private const val TAG = "DetailActivity"
 const val YOUTUBE_API_KEY = "AIzaSyByGfu2SScgqi1GdSkB-gAzp8vbmR9EJVg"
@@ -20,23 +21,34 @@ private const val VIDEO_API_KEY = "https://api.themoviedb.org/3/movie/%d/videos?
 class DetailActivity : YouTubeBaseActivity() {
     private lateinit var tvTitle: TextView
     private lateinit var tvOverview: TextView
-    private lateinit var ratingBar: RatingBar
+//    private lateinit var ratingBar: RatingBar
     private lateinit var ytPlayer: YouTubePlayerView
+    private lateinit var tvRelease: TextView
+    private lateinit var tvRecommend: TextView
+    private lateinit var tvRating: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movie_detail)
+//        setContentView(R.layout.activity_movie_detail)
+        setContentView(R.layout.activity_details)
         tvTitle = findViewById(R.id.tvTitle)
         tvOverview = findViewById(R.id.tvOverview)
-        ratingBar = findViewById(R.id.rbVoteAverager)
-        ytPlayer =findViewById(R.id.player)
-
+//        ratingBar = findViewById(R.id.rbVoteAverager)
+        ytPlayer = findViewById(R.id.player)
+        // newly added
+        tvRelease = findViewById(R.id.tvReleaseDate)
+        tvRecommend = findViewById(R.id.tvRecommend)
+        tvRating = findViewById(R.id.tvRating)
 
         val movie = intent.getParcelableExtra<Movie>(Movie_Extra) as Movie
         Log.i(TAG, "Movie is $movie")
         tvTitle.text = movie.title
         tvOverview.text = movie.overview
-        ratingBar.rating = movie.voted.toFloat()
+//        ratingBar.rating = movie.voted.toFloat()
+        tvRelease.text = movie.release
+        tvRecommend.text = movie.voteCount.toString()
+        tvRating.text = movie.voted.toString() + " Star"
+
         val client= AsyncHttpClient()
 
         client.get(VIDEO_API_KEY.format(movie.movieId), object:JsonHttpResponseHandler(){
