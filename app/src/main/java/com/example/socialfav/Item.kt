@@ -41,11 +41,11 @@ class Item: ParseObject() {
     }
 
     //Image
-    fun getImage(): ParseFile?{
-        return getParseFile(KEY_IMAGE)
+    fun getImage(): String?{
+        return getString(KEY_IMAGE)
     }
-    fun setImage(parsefile : ParseFile){
-        put(KEY_IMAGE, parsefile)
+    fun setImage(image : String){
+        put(KEY_IMAGE, image)
     }
 
     //Num of Recs
@@ -78,7 +78,7 @@ class Item: ParseObject() {
         const val KEY_TITLE = "Title"
         const val KEY_GENRE = "Genre"
         const val KEY_SYNOPSIS = "Synopsis"
-        const val KEY_IMAGE = "Image"
+        const val KEY_IMAGE = "PosterUrl"
         const val KEY_NUMRECS = "NumOfRecommendations"
         const val KEY_RECBY = "RecommendedBy"
         const val KEY_LINKS = "Links"
