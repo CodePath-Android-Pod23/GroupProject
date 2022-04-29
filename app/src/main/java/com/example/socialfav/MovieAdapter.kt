@@ -75,7 +75,6 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         }
 
 
-
         override fun onClick(p0: View?) {
             // 1. get notified with specific movie which was clicked
             val movie = movies[adapterPosition]

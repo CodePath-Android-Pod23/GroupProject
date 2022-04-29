@@ -1,6 +1,5 @@
 package com.example.socialfav
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,12 +7,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
-import com.example.socialfav.fragments.ProfileFragment
 import com.google.android.material.textfield.TextInputLayout
 import com.parse.ParseUser
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
 
 class UserDetails : AppCompatActivity() {
@@ -33,9 +30,8 @@ class UserDetails : AppCompatActivity() {
         }
         if(!user.getParseFile("profilePicture")?.isDataAvailable!!){
             val userPhoto = findViewById<ImageView>(R.id.iv_avatar)
-//            val radius = 30;
-//            val margin = 10;
-            Glide.with(this).load(user.getParseFile("profilePicture")?.url).override(250, 300).into(userPhoto)
+            Glide.with(this).load(user.getParseFile("profilePicture")?.url).override(250, 250)
+                .circleCrop().into(userPhoto)
         }
 
 
@@ -48,10 +44,7 @@ class UserDetails : AppCompatActivity() {
             val number = findViewById<TextInputLayout>(R.id.et_phoneNumber).editText?.text.toString()
             //Log.i(TAG, number)
             updateUserProfile(username,fullName, email, city,number)
-
         }
-
-
     }
 
     private fun updateUserProfile(username: String, fullName: String, email:String, city: String, number: String){
@@ -71,14 +64,12 @@ class UserDetails : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-
     }
 
     private fun goToProfileSettings(){
         val intent = Intent( this, GenreActivity::class.java )
         startActivity(intent)
         finish()
-
 
         var goTo = intent.getStringExtra("Activity")
         if (goTo.equals("SignUp")){
@@ -90,10 +81,6 @@ class UserDetails : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-
-
-
     }
 
     companion object{
