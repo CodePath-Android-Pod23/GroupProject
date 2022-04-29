@@ -59,7 +59,6 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
             if (friendArr != null) {
                 FriendList = friendArr.toMutableList()
                 if(FriendList.contains(friendID)){
-                    //TODO: set Button
                     itemView.findViewById<Button>(R.id.outlinedButton).setText("Friends")
                 }
             }
@@ -84,12 +83,10 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
             if(!FriendList.contains(friendID)){
                 Log.i(TAG, "Add Friend $friendID")
                 FriendList.add(friendID)
-                //TODO:Button change
                 v.itemView.findViewById<Button>(R.id.outlinedButton).setText("Friends")
             }else if(FriendList.contains(friendID)){
                 Log.i(TAG, "Remove Friend $friendID")
                 FriendList.remove(friendID)
-                //TODO:Button change
                 v.itemView.findViewById<Button>(R.id.outlinedButton).setText("Add Friend")
 
 
@@ -97,7 +94,6 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         }else{
             Log.i(TAG, "Friend list was empty. Adding friend")
             FriendList.add(friendID)
-            //TODO:Button change
             v.itemView.findViewById<Button>(R.id.outlinedButton).setText("Friends")
 
         }
