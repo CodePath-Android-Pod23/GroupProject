@@ -40,8 +40,16 @@ class GenreActivity : AppCompatActivity() {
 
         queryGenres()
 
-        findViewById<Button>(R.id.btn_saveChoices).setOnClickListener {
+        findViewById<Button>(R.id.btn_books).setOnClickListener{
+            Toast.makeText(this, "Books Coming Soon!", Toast.LENGTH_SHORT).show()
+        }
+
+        val saveBtn = findViewById<Button>(R.id.btn_saveChoices)
+
+        saveBtn.setOnClickListener {
             if (genresChosen.size >= 5) {
+
+                saveBtn.setBackgroundColor(resources.getColor(R.color.primary))
                 makePointerArr()
                 val userGenres = JSONArray(genresChosen)
                 val pointerArr = JSONArray(genresPointers)

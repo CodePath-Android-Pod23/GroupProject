@@ -85,7 +85,6 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
             // 2. Use the intent to navigate to the new activity
             val intent = Intent(context, DetailActivity::class.java)
 
-
             intent.putExtra(Movie_Extra, movie)
 
 

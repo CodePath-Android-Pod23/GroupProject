@@ -118,7 +118,6 @@
                         app:strokeColor="@color/primary"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
-
                 </LinearLayout>
 
 

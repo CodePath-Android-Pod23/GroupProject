@@ -22,6 +22,7 @@ class DetailActivity : YouTubeBaseActivity() {
     private lateinit var tvOverview: TextView
     private lateinit var ratingBar: RatingBar
     private lateinit var ytPlayer: YouTubePlayerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
@@ -31,13 +32,13 @@ class DetailActivity : YouTubeBaseActivity() {
         ytPlayer =findViewById(R.id.player)
 
 
-
         val movie = intent.getParcelableExtra<Movie>(Movie_Extra) as Movie
         Log.i(TAG, "Movie is $movie")
         tvTitle.text = movie.title
         tvOverview.text = movie.overview
         ratingBar.rating = movie.voted.toFloat()
         val client= AsyncHttpClient()
+
         client.get(VIDEO_API_KEY.format(movie.movieId), object:JsonHttpResponseHandler(){
             override fun onFailure(
                 statusCode: Int,
@@ -52,7 +53,7 @@ class DetailActivity : YouTubeBaseActivity() {
                 Log.i(TAG, "Video success")
                 val results =  json.jsonObject.getJSONArray("results")
                 if (results.length() == 0){
-                    Log.w(TAG, "No movie trilers found")
+                    Log.w(TAG, "No movie trailers found")
                     return
                 }
                 val movieTrailerJson = results.getJSONObject(0)
