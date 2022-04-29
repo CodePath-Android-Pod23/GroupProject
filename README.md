@@ -293,6 +293,11 @@ Here's a walkthrough of implemented user stories:
 
 <img src='Sprint2.gif' title='Video Walkthrough for Sprint 2' width='' alt='Sprint 2 Video Walkthrough' />
 
+### Sprint 3 (Final Sprint)
+Here's a walkthrough of implemented user stories:
+
+<img src='Sprint3.gif' title='Video Walkthrough for Sprint 3' width='' alt='Sprint 3 Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
