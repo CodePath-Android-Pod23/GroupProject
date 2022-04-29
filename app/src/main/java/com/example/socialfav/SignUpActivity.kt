@@ -58,10 +58,8 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun goToChoosingFavs(){
-        //TODO: Should lead to Choosing Favs Activity.Currently goes to UserDetails to test functionality
-
-        //val intent = Intent(this,FavActivity::class.java)
         val intent = Intent(this,UserDetails::class.java)
+        intent.putExtra("Activity", "SignUp")
         startActivity(intent)
         finish()
     }
