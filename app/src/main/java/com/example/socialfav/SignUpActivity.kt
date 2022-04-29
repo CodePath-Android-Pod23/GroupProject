@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.parse.ParseUser
@@ -15,7 +14,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-
         findViewById<Button>(R.id.btn_signUp).setOnClickListener{
             val username = findViewById<TextInputLayout>(R.id.et_username).editText?.text.toString()
             val password = findViewById<TextInputLayout>(R.id.et_password).editText?.text.toString()
@@ -23,16 +21,6 @@ class SignUpActivity : AppCompatActivity() {
             val email = findViewById<TextInputLayout>(R.id.et_email).editText?.text.toString()
 
             signUpUser(username,password, fullName, email)
-
-//            val intent = Intent( this, userDetails::class.java )
-//            startActivity(intent)
-//            finish()
-        }
-
-        findViewById<ImageView>(R.id.iv_backbtn).setOnClickListener{
-            val intent = Intent( this, MainActivity::class.java )
-            startActivity(intent)
-            finish()
         }
     }
 
@@ -48,7 +36,7 @@ class SignUpActivity : AppCompatActivity() {
         user.signUpInBackground { e ->
             if (e == null) {
                 Toast.makeText(this, "Sign up was successful!", Toast.LENGTH_SHORT).show()
-                Log.i(TAG, "Successful Sigh Up")
+                Log.i(TAG, "Successful Sign Up")
                 goToChoosingFavs()
             } else {
                 Toast.makeText(this, "Sign up was unsuccessful. Please try again.", Toast.LENGTH_SHORT).show()
@@ -58,8 +46,8 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun goToChoosingFavs(){
-        val intent = Intent(this,UserDetails::class.java)
-        intent.putExtra("Activity", "SignUp")
+        val intent = Intent(this, UserDetails::class.java)
+//        intent.putExtra("Previous", "SignUp")
         startActivity(intent)
         finish()
     }

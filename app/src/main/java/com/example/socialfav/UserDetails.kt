@@ -10,11 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.android.material.textfield.TextInputLayout
 import com.parse.ParseUser
-import jp.wasabeef.glide.transformations.RoundedCornersTransformation
-
 
 class UserDetails : AppCompatActivity() {
     val user = ParseUser.getCurrentUser()
+    private var isNewUser = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +22,16 @@ class UserDetails : AppCompatActivity() {
         findViewById<TextInputLayout>(R.id.et_email).editText?.setText(user.email)
         findViewById<TextInputLayout>(R.id.et_fullName).editText?.setText(user.getString("FullName"))
         findViewById<TextInputLayout>(R.id.et_username).editText?.setText(user.username)
-        if(!user.getString("Location").isNullOrEmpty()){
+
+        if(user.getString("Location").isNullOrEmpty()) {
+            isNewUser = true
+        } else {
             findViewById<TextInputLayout>(R.id.et_city).editText?.setText(user.getString("Location"))
         }
         if(!user.getString("PhoneNumber").isNullOrEmpty()){
             findViewById<TextInputLayout>(R.id.et_phoneNumber).editText?.setText(user.getString("PhoneNumber"))
         }
-        if(!user.getParseFile("profilePicture")?.isDataAvailable!!){
+        if(user.getParseFile("profilePicture") != null){
             val userPhoto = findViewById<ImageView>(R.id.iv_avatar)
             Glide.with(this).load(user.getParseFile("profilePicture")?.url).override(250, 250)
                 .circleCrop().into(userPhoto)
@@ -68,12 +70,13 @@ class UserDetails : AppCompatActivity() {
     }
 
     private fun goToProfileSettings(){
-        val intent = Intent( this, GenreActivity::class.java )
-        startActivity(intent)
-        finish()
+//        val intent = Intent( this, GenreActivity::class.java )
+//        startActivity(intent)
+//        finish()
 
-        var goTo = intent.getStringExtra("Activity")
-        if (goTo.equals("SignUp")){
+//        var goTo = intent.getStringExtra("Activity")
+//        Log.i(TAG, "goTo is " + goTo)
+        if (isNewUser){
             val intent = Intent( this, GenreActivity::class.java )
             startActivity(intent)
             finish()
