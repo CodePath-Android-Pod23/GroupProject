@@ -4,47 +4,42 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_add_profile.xml" value="0.222" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_addprofile_v2.xml" value="0.323" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_avatar1.xml" value="0.175" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_avatar_image.xml" value="0.222" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_baseline_person_pin_circle_24.xml" value="0.323" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_button___next.xml" value="0.323" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/drawable/ic_image.xml" value="0.341" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_details.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_fav.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_genre.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_nearby_user.xml" value="0.38333333333333336" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_movie_detail.xml" value="0.33695652173913043" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_nearby_user.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_user_details.xml" value="0.5" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/activity_user_profile_screen.xml" value="0.38333333333333336" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/bottom_sheet_dialog_layout.xml" value="0.25" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/card_layout.xml" value="0.38333333333333336" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/comment_post.xml" value="0.5" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_feed.xml" value="0.28846153846153844" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_genre_fragments.xml" value="0.38333333333333336" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog.xml" value="0.33695652173913043" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog_item.xml" value="0.2713541666666667" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_nearby.xml" value="0.33695652173913043" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/genre_post.xml" value="0.25" />
         <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/item_post.xml" value="0.33" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_fav.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_genre.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/layout/users.xml" value="0.5" />
+        <entry key="..\:/Projects/SocialFav/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_nearby_user.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_sign_up.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_user_details.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/activity_user_profile_screen.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/genre_post.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/item_post.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_fav.xml" value="0.1875" />
-        <entry key="app/src/main/res/layout/activity_genre.xml" value="0.1875" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16614583333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1875" />
-        <entry key="app/src/main/res/layout/activity_movie_detail.xml" value="0.19166666666666668" />
-        <entry key="app/src/main/res/layout/activity_nearby_user.xml" value="0.1875" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.25677083333333334" />
-        <entry key="app/src/main/res/layout/activity_user_profile_screen.xml" value="0.1875" />
-        <entry key="app/src/main/res/layout/comment_post.xml" value="0.19166666666666668" />
-        <entry key="app/src/main/res/layout/fragment_feed.xml" value="0.1515625" />
-        <entry key="app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog.xml" value="0.16822916666666668" />
-        <entry key="app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog_item.xml" value="0.16822916666666668" />
-        <entry key="app/src/main/res/layout/fragment_nearby.xml" value="0.1515625" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.15729166666666666" />
-        <entry key="app/src/main/res/layout/genre_post.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/item_post.xml" value="0.11979166666666667" />
-        <entry key="app/src/main/res/layout/users.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/fragment_modal_bottom_sheet_list_dialog_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/item_post.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Chenming/AndroidStudioProjects/GroupProject/app/src/main/res/layout/users.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>

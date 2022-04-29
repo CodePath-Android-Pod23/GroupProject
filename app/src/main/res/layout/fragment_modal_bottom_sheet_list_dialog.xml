@@ -19,7 +19,6 @@
 
         <!--EDIT PROFILE-->
         <LinearLayout
-            android:id="@+id/editProfile"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -46,7 +45,6 @@
 
 
         <ImageView
-            android:id="@+id/editProfileArrow"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:outlineAmbientShadowColor="@color/black"

@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.socialfav.fragments.NearbyFragment
 import com.parse.ParseUser
 import org.json.JSONArray
@@ -44,6 +46,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
     inner class ViewHolder(itemView: View ): RecyclerView.ViewHolder(itemView) {
         private val tvName = itemView.findViewById<TextView>(R.id.tv_name)
         private val tvCity = itemView.findViewById<TextView>(R.id.tv_City)
+        private val ivProfile = itemView.findViewById<ImageView>(R.id.iv_avatar)
         private val tvTag1 = itemView.findViewById<TextView>(R.id.tag1)
         private val tvTag2 = itemView.findViewById<TextView>(R.id.tag2)
         private val tvTag3 = itemView.findViewById<TextView>(R.id.tag3)
@@ -53,7 +56,8 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         fun bind(user: ParseUser){
             tvName.text = user.getString("FullName")
             tvCity.text = user.getString("Location")
-//            Glide.with(context).load(movie.posterImageUrl).into(tvPoster)
+            Glide.with(context).load(user.getParseFile("profilePicture")?.url).override(50, 50)
+                .circleCrop().into(ivProfile)
             friendID = user.objectId
             var friendArr: JSONArray? = currentUser.getJSONArray("Friends")
             if (friendArr != null) {
@@ -62,7 +66,6 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
                     itemView.findViewById<Button>(R.id.outlinedButton).setText("Friends")
                 }
             }
-
             tvTag1.text = user.getJSONArray("Genres")?.getString(0)
             tvTag2.text = user.getJSONArray("Genres")?.getString(1)
             tvTag3.text = user.getJSONArray("Genres")?.getString(2)
