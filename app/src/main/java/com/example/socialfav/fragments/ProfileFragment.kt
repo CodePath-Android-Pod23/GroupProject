@@ -9,8 +9,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.socialfav.R
 import com.example.socialfav.SignUpActivity
+import com.parse.ParseUser
 
 class ProfileFragment : Fragment() {
 
@@ -30,5 +33,14 @@ class ProfileFragment : Fragment() {
             val modalBottomSheet = ModalBottomSheet()
             modalBottomSheet.show(requireActivity().supportFragmentManager, ModalBottomSheet.TAG)
         }
+
+        val userPhoto = view.findViewById<ImageView>(R.id.avatar)
+        var currUser = ParseUser.getCurrentUser()
+        Glide.with(this.requireContext()).load(currUser.getParseFile("profilePicture")?.url).into(userPhoto)
+        view.findViewById<TextView>(R.id.tv_username).setText(currUser.getString("FullName"))
+        view.findViewById<TextView>(R.id.tv_location).setText(currUser.getString("Location"))
+        view.findViewById<TextView>(R.id.tv_caption).setText(currUser.getString("username"))
+
+
     }
 }
