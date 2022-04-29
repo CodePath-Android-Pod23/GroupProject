@@ -2,7 +2,7 @@
 Original App Design Project 
 ===
 
-# Favourites & Friends
+# FavsConnect
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -33,17 +33,17 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 - [x] Determine the APIs used to get movie and book data
 - [x] New users should be able to sign up and create a profile. 
 - [x] Existing users should be able to log in.
-- [ ] Existing users should be able to log out.
+- [x] Existing users should be able to log out.
 - [x] Users should be able to add and edit the information on their profile (location, contact information, etc.)
 - [x] Users can select their favorite genres.
 - [x] Users can view the list of recommendations (movies) based on their selected/favourite genres.
-- [ ] Users can view the detailed information of each movie.
-- [ ] Users should be able to see a list of other users in their location with similar interests.
-- [ ] Users should be able to view other users' profiles.
+- [x] Users can view the detailed information of each movie.
+- [x] Users should be able to see a list of other users in their location with similar interests.
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can send messages to people who have the similar tastes with them.
+- [ ] Users should be able to view other users' profiles.
 - [ ] Users also can organize virtual and offline events to meet up.
 - [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
 - [ ] Users can get recommendations (books) based on their selected/favourite genres.
