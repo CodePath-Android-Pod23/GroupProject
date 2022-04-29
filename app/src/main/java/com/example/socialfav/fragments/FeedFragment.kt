@@ -28,6 +28,8 @@ private const val GENRE_KEY = "https://api.themoviedb.org/3/genre/movie/list?api
 
 class FeedFragment : Fragment() {
 
+    val user = ParseUser.getCurrentUser()
+
     private val movies = ArrayList<Movie>()
     val genres = HashMap<Int, String>()
     //    var genre_id = listOf<Int>(80, 27, 35)
@@ -40,7 +42,7 @@ class FeedFragment : Fragment() {
     private lateinit var rvMovies: RecyclerView
     lateinit var adapter: MovieAdapter
 
-    override fun onCreateView(
+    override fun onCreateView (
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

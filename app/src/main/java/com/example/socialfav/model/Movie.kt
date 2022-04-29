@@ -40,8 +40,6 @@ data class Movie(
                         movieJson.getDouble("vote_average"),
 
                         genreToList(movieJson.getJSONArray("genre_ids"))
-
-
                     )
                 )
             }

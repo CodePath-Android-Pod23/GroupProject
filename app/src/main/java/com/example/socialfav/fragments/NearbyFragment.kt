@@ -37,7 +37,6 @@ class NearbyFragment : Fragment() {
 
     }
 
-
     private fun queryUsers() {
 //        adapter.clear()
         // 1. get the current user's location and favorite genres

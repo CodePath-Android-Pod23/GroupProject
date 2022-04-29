@@ -1,7 +1,6 @@
 package com.example.socialfav
 
 import android.content.Context
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +22,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
     val currentUser: ParseUser = ParseUser.getCurrentUser()
     lateinit var friendID: String
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NearbyAdapter.ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.users,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_user,parent,false)
 
         return ViewHolder(view)
     }

@@ -15,6 +15,7 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
 class UserDetails : AppCompatActivity() {
     val user = ParseUser.getCurrentUser()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_details)

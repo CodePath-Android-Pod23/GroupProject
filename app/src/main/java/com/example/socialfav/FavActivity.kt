@@ -1,16 +1,25 @@
 package com.example.socialfav
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.example.socialfav.fragments.FeedFragment
 import com.example.socialfav.fragments.NearbyFragment
 import com.example.socialfav.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.parse.ParseUser
+
 
 class FavActivity : AppCompatActivity() {
+
+    val currUser = ParseUser.getCurrentUser()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fav)
@@ -20,7 +29,8 @@ class FavActivity : AppCompatActivity() {
 
         val fragmentManager: FragmentManager = supportFragmentManager
 
-        findViewById<BottomNavigationView>(R.id.bottom_navigation).setOnItemSelectedListener {
+        val navigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        navigationView.setOnItemSelectedListener {
                 item ->
 
             var fragmentToShow: Fragment? = null
@@ -44,7 +54,27 @@ class FavActivity : AppCompatActivity() {
         }
 
         // Set default selection
-        findViewById<BottomNavigationView>(R.id.bottom_navigation).selectedItemId = R.id.action_home
+        navigationView.selectedItemId = R.id.action_home
+
+        //profile photo in the bottom nav bar
+        val menu = navigationView.menu
+
+        val menuItem = menu.findItem(R.id.action_profile)
+
+//        menuItem.setIcon(resources.getDrawable(R.drawable.ic_favorites_outline))
+
+        Glide.with(this).asDrawable().load(currUser.getParseFile("profilePicture")?.url).circleCrop().into(object : CustomTarget<Drawable?>() {
+            override fun onResourceReady(
+                resource: Drawable,
+                transition: Transition<in Drawable?>?
+            ) {
+                menuItem.setIcon(resource)
+            }
+
+            override fun onLoadCleared(placeholder: Drawable?) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
