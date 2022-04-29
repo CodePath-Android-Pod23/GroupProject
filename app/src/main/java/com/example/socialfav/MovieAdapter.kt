@@ -20,6 +20,7 @@ import org.json.JSONArray
 
 
 val Movie_Extra = "Movie"
+val currentUser = ParseUser.getCurrentUser()
 
 class MovieAdapter(private val context: Context, private val movies: List<Movie>, private val genres: HashMap<Int, String>, private val selected_genres: HashMap<Int?, String?>)
     : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
@@ -49,6 +50,9 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         private val tvoverview = itemView.findViewById<TextView>(R.id.tvDescription)
         private val tvTag1 = itemView.findViewById<TextView>(R.id.tvTag1)
         private val tvTag2 = itemView.findViewById<TextView>(R.id.tvTag2)
+
+
+
         init {
             itemView.setOnClickListener(this)
         }
@@ -77,7 +81,6 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
 
         }
 
-
         override fun onClick(p0: View?) {
             // 1. get notified with specific movie which was clicked
             val movie = movies[adapterPosition]
@@ -100,7 +103,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
     fun JSONArray.toMutableList(): MutableList<Any> = MutableList(length(), this::get)
 
     private fun makeMovieItem(holder: ViewHolder, movie: Movie){
-        val currentUser = ParseUser.getCurrentUser()
+
         var favArr: JSONArray? = currentUser.getJSONArray("Recommendations")
         var FavList :MutableList<Any> = arrayListOf()
 

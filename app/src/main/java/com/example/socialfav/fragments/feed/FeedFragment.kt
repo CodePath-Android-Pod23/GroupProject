@@ -26,6 +26,10 @@ private const val GENRE_KEY = "https://api.themoviedb.org/3/genre/movie/list?api
 
 class FeedFragment : Fragment() {
 
+    lateinit var friendsRecyclerView: RecyclerView
+    lateinit var userAdapter: UserAdapter
+    var recommenders = ArrayList<ParseUser>()
+
     val user = ParseUser.getCurrentUser()
 
     private val movies = ArrayList<Movie>()

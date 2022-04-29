@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.text.Layout
 import android.util.Log
 import android.util.Pair
@@ -82,9 +83,18 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         override fun onClick(p0: View?) {
             // 1. get notified with specific movie which was clicked
 
+            val user = nearbyUsers[adapterPosition]
+
             Toast.makeText(context, "User Selected", Toast.LENGTH_SHORT).show()
 
+            val bundle = Bundle()
+
             val intent = Intent( context, UserProfileActivity::class.java )
+
+            bundle.putString("user", user.toString())
+
+            intent.putExtras(bundle)
+
             context.startActivity(intent)
         }
 
