@@ -1,17 +1,20 @@
-package com.example.socialfav
+package com.example.socialfav.fragments.nearbyusers
 
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Context
+import android.content.Intent
+import android.text.Layout
 import android.util.Log
+import android.util.Pair
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.socialfav.fragments.NearbyFragment
+import com.example.socialfav.*
+import com.example.socialfav.fragments.nearbyusers.NearbyFragment
 import com.parse.ParseUser
 import org.json.JSONArray
 
@@ -21,7 +24,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
     var FriendList :MutableList<Any> = arrayListOf()
     val currentUser: ParseUser = ParseUser.getCurrentUser()
     lateinit var friendID: String
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NearbyAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_user,parent,false)
 
         return ViewHolder(view)
@@ -42,7 +45,7 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         return nearbyUsers.size
     }
 
-    inner class ViewHolder(itemView: View ): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View ): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         private val tvName = itemView.findViewById<TextView>(R.id.tv_name)
         private val tvCity = itemView.findViewById<TextView>(R.id.tv_City)
         private val ivProfile = itemView.findViewById<ImageView>(R.id.iv_avatar)
@@ -51,6 +54,10 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         private val tvTag3 = itemView.findViewById<TextView>(R.id.tag3)
         private val tvTag4 = itemView.findViewById<TextView>(R.id.tag4)
         private val tvTag5 = itemView.findViewById<TextView>(R.id.tag5)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
 
         fun bind(user: ParseUser){
             tvName.text = user.getString("FullName")
@@ -72,11 +79,20 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
             tvTag5.text = user.getJSONArray("Genres")?.getString(4)
         }
 
+        override fun onClick(p0: View?) {
+            // 1. get notified with specific movie which was clicked
+
+            Toast.makeText(context, "User Selected", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent( context, UserProfileActivity::class.java )
+            context.startActivity(intent)
+        }
+
 
     }
     fun JSONArray.toMutableList(): MutableList<Any> = MutableList(length(), this::get)
 
-    private fun updateFriendList(v:ViewHolder){
+    private fun updateFriendList(v: ViewHolder){
         var friendArr: JSONArray? = currentUser.getJSONArray("Friends")
 
         if (friendArr != null) {

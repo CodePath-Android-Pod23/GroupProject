@@ -9,8 +9,8 @@ import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.example.socialfav.fragments.FeedFragment
-import com.example.socialfav.fragments.NearbyFragment
+import com.example.socialfav.fragments.feed.FeedFragment
+import com.example.socialfav.fragments.nearbyusers.NearbyFragment
 import com.example.socialfav.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.ParseUser

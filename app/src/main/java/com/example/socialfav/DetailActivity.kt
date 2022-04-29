@@ -16,6 +16,7 @@ import okhttp3.Headers
 private const val TAG = "DetailActivity"
 const val YOUTUBE_API_KEY = "AIzaSyByGfu2SScgqi1GdSkB-gAzp8vbmR9EJVg"
 private const val VIDEO_API_KEY = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
+
 class DetailActivity : YouTubeBaseActivity() {
     private lateinit var tvTitle: TextView
     private lateinit var tvOverview: TextView

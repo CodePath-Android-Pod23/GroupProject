@@ -1,4 +1,4 @@
-package com.example.socialfav.fragments
+package com.example.socialfav.fragments.feed
 
 import android.os.Bundle
 import android.util.Log

@@ -13,6 +13,7 @@ import android.widget.*
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.socialfav.fragments.nearbyusers.NearbyAdapter
 import com.example.socialfav.model.Movie
 import com.parse.*
 import org.json.JSONArray
@@ -41,6 +42,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
     override fun getItemCount(): Int {
         return movies.size
     }
+
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),View.OnClickListener{
         private val tvPoster = itemView.findViewById<ImageView>(R.id.ivPoster)
         private val tvTitle = itemView.findViewById<TextView>(R.id.tvTitle)
@@ -50,6 +52,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         init {
             itemView.setOnClickListener(this)
         }
+
         fun bind(movie: Movie){
             tvTitle.text = movie.title
             tvoverview.text = movie.overview
