@@ -23,9 +23,8 @@ class FavActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fav)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-//        supportActionBar?.setLogo(R.drawable.nav_logo_whiteout)
-        supportActionBar?.setDisplayUseLogoEnabled(true)
+//        supportActionBar?.setDisplayShowHomeEnabled(true)
+//        supportActionBar?.setDisplayUseLogoEnabled(true)
 
         val fragmentManager: FragmentManager = supportFragmentManager
 

@@ -1,13 +1,8 @@
 package com.example.socialfav.fragments.nearbyusers
 
-import android.app.Activity
-import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
-import android.text.Layout
 import android.util.Log
-import android.util.Pair
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,12 +10,11 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.socialfav.*
-import com.example.socialfav.fragments.nearbyusers.NearbyFragment
 import com.parse.ParseUser
 import org.json.JSONArray
 
 
-class NearbyAdapter(private val context: Context, private val nearbyUsers: List<ParseUser>)
+class NearbyAdapter(private val context: Context, private val nearbyUsers: ArrayList<ParseUser>)
     : RecyclerView.Adapter<NearbyAdapter.ViewHolder>() {
     var FriendList :MutableList<Any> = arrayListOf()
     val currentUser: ParseUser = ParseUser.getCurrentUser()
@@ -38,12 +32,17 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         holder.itemView.findViewById<Button>(R.id.outlinedButton).setOnClickListener(View.OnClickListener {
             friendID = user.objectId
             updateFriendList(holder)
-
         })
     }
 
     override fun getItemCount(): Int {
         return nearbyUsers.size
+    }
+
+    // Clean all elements of the recycler
+    fun clear() {
+        nearbyUsers.clear()
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View ): RecyclerView.ViewHolder(itemView), View.OnClickListener {
@@ -63,8 +62,11 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         fun bind(user: ParseUser){
             tvName.text = user.getString("FullName")
             tvCity.text = user.getString("Location")
-            Glide.with(context).load(user.getParseFile("profilePicture")?.url).override(50, 50)
-                .circleCrop().into(ivProfile)
+            val photo = user.getParseFile("profilePicture")
+            if (photo != null) {
+                Glide.with(context).load(photo.url).override(50, 50).circleCrop().into(ivProfile)
+            }
+
             friendID = user.objectId
             var friendArr: JSONArray? = currentUser.getJSONArray("Friends")
             if (friendArr != null) {
@@ -83,17 +85,13 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
         }
 
         override fun onClick(p0: View?) {
-            // 1. get notified with specific movie which was clicked
+            // 1. get notified with specific user which was clicked
 
             val user = nearbyUsers[adapterPosition]
-
             Toast.makeText(context, "User Selected", Toast.LENGTH_SHORT).show()
 
-
             val intent = Intent( context, UserProfileActivity::class.java )
-
             intent.putExtra("Friend", user)
-
             context.startActivity(intent)
         }
 
@@ -115,8 +113,6 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
                 Log.i(TAG, "Remove Friend $friendID")
                 FriendList.remove(friendID)
                 v.itemView.findViewById<Button>(R.id.outlinedButton).setText("Add Friend")
-
-
             }
         }else{
             Log.i(TAG, "Friend list was empty. Adding friend")

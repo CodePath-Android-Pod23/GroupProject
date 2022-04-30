@@ -35,9 +35,6 @@
             android:value="@string/back4app_client_key" />
 
         <activity
-            android:name=".UserProfileScreen"
-            android:exported="false" />
-        <activity
             android:name=".FavActivity"
             android:exported="false" />
         <activity

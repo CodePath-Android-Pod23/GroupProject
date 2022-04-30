@@ -122,15 +122,12 @@ class UserProfileActivity : AppCompatActivity() {
         if (friends != null ){
             for (i in 0 until friends.length()){
                 val friendID = friends.getString(i)
-
                 val query: ParseQuery<ParseUser> = ParseUser.getQuery()
-
                 query.whereEqualTo("objectId", friendID)
-
                 queries.add(query)
             }
         }
-
+        if (queries.size == 0) return
         val mainQuery: ParseQuery<ParseUser> = ParseQuery.or(queries)
 
         mainQuery.findInBackground(object: FindCallback<ParseUser> {

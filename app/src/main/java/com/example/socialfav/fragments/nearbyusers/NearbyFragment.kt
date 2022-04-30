@@ -33,11 +33,10 @@ class NearbyFragment : Fragment() {
         usersRecyclerView.adapter = adapter
         usersRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         queryUsers()
-
     }
 
     private fun queryUsers() {
-//        adapter.clear()
+        adapter.clear()
         // 1. get the current user's location and favorite genres
         val currentUser: ParseUser = ParseUser.getCurrentUser()
         val location = currentUser.getString("Location")
@@ -61,6 +60,7 @@ class NearbyFragment : Fragment() {
             }
         }
         // Find users match at least one of the genres use compound queries
+        if (queries.size == 0) return
         val mainQuery: ParseQuery<ParseUser> = ParseQuery.or(queries)
         mainQuery.findInBackground(object: FindCallback<ParseUser> {
             override fun done(users: MutableList<ParseUser>?, e: ParseException?) {
@@ -74,7 +74,6 @@ class NearbyFragment : Fragment() {
                         }
                         nearbyUsers.addAll(users)
                         adapter.notifyDataSetChanged()
-//                        swipeContainer.setRefreshing(false)
                     }
                 }
             }

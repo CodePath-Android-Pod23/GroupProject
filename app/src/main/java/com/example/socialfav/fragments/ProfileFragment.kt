@@ -45,7 +45,10 @@ class ProfileFragment : Fragment() {
 
         val userPhoto = view.findViewById<ImageView>(R.id.avatar)
         val currUser = ParseUser.getCurrentUser()
-        Glide.with(this.requireContext()).load(currUser.getParseFile("profilePicture")?.url).circleCrop().into(userPhoto)
+        val photo = currUser.getParseFile("profilePicture")
+        if (photo != null) {
+            Glide.with(this.requireContext()).load(photo.url).circleCrop().into(userPhoto)
+        }
         view.findViewById<TextView>(R.id.tv_username).setText(currUser.getString("FullName"))
         view.findViewById<TextView>(R.id.tv_location).setText(currUser.getString("Location"))
         view.findViewById<TextView>(R.id.tv_caption).setText(currUser.getString("username"))
@@ -67,15 +70,12 @@ class ProfileFragment : Fragment() {
         if (friends != null ){
             for (i in 0 until friends.length()){
                 val friendID = friends.getString(i)
-
                 val query: ParseQuery<ParseUser> = ParseUser.getQuery()
-
                 query.whereEqualTo("objectId", friendID)
-
                 queries.add(query)
             }
         }
-
+        if (queries.size == 0) return
         val mainQuery: ParseQuery<ParseUser> = ParseQuery.or(queries)
 
         mainQuery.findInBackground(object: FindCallback<ParseUser> {
