@@ -39,11 +39,13 @@ Tracks what genre of book, movies etc. an individual prefers, gives the user rec
 - [x] Users can view the list of recommendations (movies) based on their selected/favourite genres.
 - [x] Users can view the detailed information of each movie.
 - [x] Users should be able to see a list of other users in their location with similar interests.
+- [x] Users can view other users' profiles.
+- [x] Users can add other users as friends.
+- [x] Users can recommend their favorate movies.
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can send messages to people who have the similar tastes with them.
-- [ ] Users can view other users' profiles.
 - [ ] Users also can organize virtual and offline events to meet up.
 - [ ] Users may receive notification on a daily or weekly basis with new recommendations.  
 - [ ] Users can get recommendations (books) based on their selected/favourite genres.
@@ -296,7 +298,7 @@ Here's a walkthrough of implemented user stories:
 ### Sprint 3 (Final Sprint)
 Here's a walkthrough of implemented user stories:
 
-<img src='Sprint3.gif' title='Video Walkthrough for Sprint 3' width='' alt='Sprint 3 Video Walkthrough' />
+<img src='sprint3.gif' title='Video Walkthrough for Sprint 3' width='' alt='Sprint 3 Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
