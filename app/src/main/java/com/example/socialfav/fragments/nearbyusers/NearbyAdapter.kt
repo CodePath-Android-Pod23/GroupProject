@@ -71,6 +71,8 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
                 FriendList = friendArr.toMutableList()
                 if(FriendList.contains(friendID)){
                     itemView.findViewById<Button>(R.id.outlinedButton).setText("Friends")
+                } else{
+                    itemView.findViewById<Button>(R.id.outlinedButton).setText("Add Friend")
                 }
             }
             tvTag1.text = user.getJSONArray("Genres")?.getString(0)
@@ -87,13 +89,10 @@ class NearbyAdapter(private val context: Context, private val nearbyUsers: List<
 
             Toast.makeText(context, "User Selected", Toast.LENGTH_SHORT).show()
 
-            val bundle = Bundle()
 
             val intent = Intent( context, UserProfileActivity::class.java )
 
-            bundle.putString("user", user.toString())
-
-            intent.putExtras(bundle)
+            intent.putExtra("Friend", user)
 
             context.startActivity(intent)
         }
