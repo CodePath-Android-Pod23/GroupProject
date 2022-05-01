@@ -270,7 +270,7 @@
                         android:layout_width="132dp"
                         android:layout_height="162dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@color/secondary" />
+                        app:srcCompat="@drawable/red" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -289,7 +289,7 @@
                                 android:id="@+id/tvTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Title"
+                                android:text="Turning Red"
                                 android:layout_weight="1"
                                 android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -302,7 +302,7 @@
                             android:layout_height="63dp"
                             android:layout_marginTop="8dp"
                             android:maxLines="4"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+                            android:text="@string/sample1"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary"
                             android:textSize="10sp" />
@@ -325,7 +325,7 @@
                         android:layout_width="132dp"
                         android:layout_height="162dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@color/secondary" />
+                        app:srcCompat="@drawable/spiderman" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -344,7 +344,7 @@
                                 android:id="@+id/tvTitle2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Title"
+                                android:text="Spider-Man: No Way Home"
                                 android:layout_weight="1"
                                 android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -357,7 +357,7 @@
                             android:layout_height="63dp"
                             android:layout_marginTop="8dp"
                             android:maxLines="4"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+                            android:text="@string/sample2"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary"
                             android:textSize="10sp" />

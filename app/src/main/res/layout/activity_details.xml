@@ -67,23 +67,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:paddingHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
             >
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:elevation="8dp"
+                android:backgroundTint="@color/primary"
                 >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="30dp"
-                    android:paddingVertical="10dp"
+                    android:layout_margin="10dp"
                     android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     >
 
                 <TextView
@@ -91,38 +92,49 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="572"
-                    android:textSize="25sp"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"
                     android:text="Recommends"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="@color/primary"
+                android:elevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="30dp"
-                    android:paddingVertical="10dp"
-                    android:gravity="center">
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center">
 
                     <TextView
                         android:id="@+id/tvRating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5 Stars"
-                        android:textSize="25sp" />
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
                         android:text="Rating"/>
 
                 </LinearLayout>
@@ -141,8 +153,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Recommended By"
-            android:layout_marginTop="20px"/>
+            android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"

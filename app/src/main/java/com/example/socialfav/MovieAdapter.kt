@@ -51,8 +51,6 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         private val tvTag1 = itemView.findViewById<TextView>(R.id.tvTag1)
         private val tvTag2 = itemView.findViewById<TextView>(R.id.tvTag2)
 
-
-
         init {
             itemView.setOnClickListener(this)
         }
